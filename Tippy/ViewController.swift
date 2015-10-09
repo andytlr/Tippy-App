@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         tipAmountLabel.text = "$0.00"
         billTotalLabel.text = "$0.00"
-        percentageLabel.text = "%%%%"
+        percentageLabel.text = "18%"
         
         billAmountInput.becomeFirstResponder()
     }
@@ -53,8 +53,6 @@ class ViewController: UIViewController {
         var tipAmounts = [15.0, 18.0, 20.0]
         
         let tipPercentage = tipAmounts[tipPercentageSegmentedController.selectedSegmentIndex]
-        
-        percentageLabel.text = "\(tipPercentage)"
         
         let bill = NSString(string: billAmountInput.text!).doubleValue
         let tip = (bill / 100) * tipPercentage
@@ -79,19 +77,14 @@ class ViewController: UIViewController {
         let extraPaid = roundedBillTotal - billTotal
         let tipPercentInt = Int(tipPercentage)
         
-        let sentence = "Tip \(formatMoney(tip)). The total is \(formatMoney(billTotal)). You're tipping \(tipPercentInt)%"
-        
-        let roundedSentence = "Tip \(formatMoney(roundedTipAmount)). The total is \(formatMoney(roundedBillTotal)) You're tipping \(roundedTipPercent)% by chucking in an extra \(formatMoney(extraPaid))."
-        
-        print(sentence)
-        print(roundedSentence)
-        
         if roundSwitch.on {
             tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
             billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
+            percentageLabel.text = "\(roundedTipPercent)"
         } else {
             tipAmountLabel.text = "\(formatMoney(tip))"
             billTotalLabel.text = "\(formatMoney(billTotal))"
+            percentageLabel.text = "\(tipPercentage)"
         }
     
     }
