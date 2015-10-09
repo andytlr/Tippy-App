@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         
         tipAmountLabel.text = "$0.00"
         billTotalLabel.text = "$0.00"
+        
+        billAmountInput.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
