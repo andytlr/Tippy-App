@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var percentageLabel: UILabel!
     
+    @IBOutlet weak var extraTitle: UILabel!
+    
+    @IBOutlet weak var extraLabel: UILabel!
+    
     @IBOutlet weak var roundSwitch: UISwitch!
     
     func formatMoney(cash: Double) -> String {
@@ -39,6 +43,7 @@ class ViewController: UIViewController {
         tipAmountLabel.text = "$0.00"
         billTotalLabel.text = "$0.00"
         percentageLabel.text = "18%"
+        extraLabel.text = "$0.00"
         
         billAmountInput.becomeFirstResponder()
     }
@@ -81,10 +86,15 @@ class ViewController: UIViewController {
             tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
             billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             percentageLabel.text = "\(roundedTipPercent)"
+            extraLabel.text = "\(formatMoney(extraPaid))"
+            extraLabel.hidden = false
+            extraTitle.hidden = false
         } else {
             tipAmountLabel.text = "\(formatMoney(tip))"
             billTotalLabel.text = "\(formatMoney(billTotal))"
             percentageLabel.text = "\(tipPercentage)"
+            extraLabel.hidden = true
+            extraTitle.hidden = true
         }
     
     }
