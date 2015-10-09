@@ -20,10 +20,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var percentageLabel: UILabel!
     
-    @IBOutlet weak var extraTitle: UILabel!
-    
-    @IBOutlet weak var extraLabel: UILabel!
-    
     @IBOutlet weak var roundSwitch: UISwitch!
     
     @IBOutlet weak var resultsView: UIView!
@@ -41,11 +37,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        tipAmountLabel.text = "$0.00"
-        billTotalLabel.text = "$0.00"
-        percentageLabel.text = "18%"
-        extraLabel.text = "$0.00"
         
         billAmountInput.becomeFirstResponder()
         
@@ -79,6 +70,8 @@ class ViewController: UIViewController {
         case 5...50:
             roundUpInIncrementsOf = 1.0
         case 50...100:
+            roundUpInIncrementsOf = 2.0
+        case 100...300:
             roundUpInIncrementsOf = 5.0
         default:
             roundUpInIncrementsOf = 10.0
@@ -92,14 +85,14 @@ class ViewController: UIViewController {
         if roundSwitch.on {
             tipAmountLabel.text = "Tip: \(formatMoney(roundedTipAmount))"
             billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
-            percentageLabel.text = "That's \(roundedTipPercent)"
-            extraLabel.text = "An extra \(formatMoney(extraPaid))"
-            extraLabel.hidden = false
+            if billAmountInput.text != "" {
+                percentageLabel.hidden = false
+                percentageLabel.text = "That's \(Int(round(roundedTipPercent)))% and an extra \(formatMoney(extraPaid))."
+            }
         } else {
             tipAmountLabel.text = "Tip: \(formatMoney(tip))"
             billTotalLabel.text = "Total: \(formatMoney(billTotal))"
-            percentageLabel.text = "That's \(tipPercentage)"
-            extraLabel.hidden = true
+            percentageLabel.hidden = true
         }
         
         if billAmountInput.text == "" {

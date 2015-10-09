@@ -12,20 +12,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="center" on="YES" id="8og-R5-Dmf">
-                                <rect key="frame" x="306" y="81" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="giI-i5-SQm"/>
-                                </connections>
-                            </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="VHf-fc-nFw">
-                                <rect key="frame" x="21" y="83" width="266" height="29"/>
+                                <rect key="frame" x="20" y="83" width="335" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Bad"/>
-                                    <segment title="Good"/>
-                                    <segment title="Great"/>
+                                    <segment title="~15% Bad"/>
+                                    <segment title="~18% Good"/>
+                                    <segment title="~20% Great"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.8628571629524231" blue="0.70847964286804199" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -50,8 +43,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.8628571629524231" blue="0.70847964286804199" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$13.37" textAlignment="right" minimumFontSize="16" id="RJw-Zm-wjt">
-                                <rect key="frame" x="20" y="139" width="335" height="59"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="16" id="RJw-Zm-wjt">
+                                <rect key="frame" x="20" y="146" width="335" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.0" green="0.8628571629524231" blue="0.70847964286804199" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="64"/>
@@ -60,40 +53,46 @@
                                     <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q9B-Rf-azK"/>
                                 </connections>
                             </textField>
-                            <view contentMode="scaleToFill" id="W8C-mZ-wvX">
-                                <rect key="frame" x="0.0" y="212" width="375" height="273"/>
+                            <view contentMode="scaleToFill" id="dLM-b0-TLf">
+                                <rect key="frame" x="0.0" y="239" width="375" height="484"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZi-xj-Ib9">
-                                        <rect key="frame" x="21" y="93" width="333" height="46"/>
+                                    <view contentMode="scaleToFill" id="W8C-mZ-wvX">
+                                        <rect key="frame" x="0.0" y="16" width="375" height="413"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
-                                        <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0lM-K8-uUM">
-                                        <rect key="frame" x="19" y="50" width="336" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
-                                        <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4rZ-Sx-AxR">
-                                        <rect key="frame" x="21" y="8" width="333" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
-                                        <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E0V-eT-zAN">
-                                        <rect key="frame" x="21" y="134" width="334" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
-                                        <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZi-xj-Ib9">
+                                                <rect key="frame" x="21" y="103" width="333" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                                <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0lM-K8-uUM">
+                                                <rect key="frame" x="19" y="60" width="336" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                                <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4rZ-Sx-AxR">
+                                                <rect key="frame" x="22" y="15" width="333" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                                <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="center" on="YES" id="8og-R5-Dmf">
+                                                <rect key="frame" x="163" y="357" width="51" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="giI-i5-SQm"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98420697450637817" green="0.98437517881393433" blue="0.98419648408889771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -110,7 +109,6 @@
                     <connections>
                         <outlet property="billAmountInput" destination="RJw-Zm-wjt" id="Z1W-Cl-o25"/>
                         <outlet property="billTotalLabel" destination="0lM-K8-uUM" id="FDL-Gq-24B"/>
-                        <outlet property="extraLabel" destination="E0V-eT-zAN" id="5Ti-la-tIN"/>
                         <outlet property="percentageLabel" destination="sZi-xj-Ib9" id="T5J-5o-00C"/>
                         <outlet property="resultsView" destination="W8C-mZ-wvX" id="a4s-rE-IpE"/>
                         <outlet property="roundSwitch" destination="8og-R5-Dmf" id="k0O-sI-hp7"/>
