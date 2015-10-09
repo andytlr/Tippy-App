@@ -80,7 +80,6 @@ class ViewController: UIViewController {
         let roundedTipAmount = tip + (roundedBillTotal - billTotal)
         let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / bill) * 100)
         let extraPaid = roundedBillTotal - billTotal
-        let tipPercentInt = Int(tipPercentage)
         
         if roundSwitch.on {
             tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
