@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var roundSwitch: UISwitch!
     
+    @IBOutlet weak var resultsView: UIView!
+    
     func formatMoney(cash: Double) -> String {
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
@@ -46,6 +48,12 @@ class ViewController: UIViewController {
         extraLabel.text = "$0.00"
         
         billAmountInput.becomeFirstResponder()
+        
+        if billAmountInput.text == "" {
+            resultsView.hidden = true
+        } else {
+            resultsView.hidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,18 +90,22 @@ class ViewController: UIViewController {
         let extraPaid = roundedBillTotal - billTotal
         
         if roundSwitch.on {
-            tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
-            billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
-            percentageLabel.text = "\(roundedTipPercent)"
-            extraLabel.text = "\(formatMoney(extraPaid))"
+            tipAmountLabel.text = "Tip: \(formatMoney(roundedTipAmount))"
+            billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
+            percentageLabel.text = "That's \(roundedTipPercent)"
+            extraLabel.text = "An extra \(formatMoney(extraPaid))"
             extraLabel.hidden = false
-            extraTitle.hidden = false
         } else {
-            tipAmountLabel.text = "\(formatMoney(tip))"
-            billTotalLabel.text = "\(formatMoney(billTotal))"
-            percentageLabel.text = "\(tipPercentage)"
+            tipAmountLabel.text = "Tip: \(formatMoney(tip))"
+            billTotalLabel.text = "Total: \(formatMoney(billTotal))"
+            percentageLabel.text = "That's \(tipPercentage)"
             extraLabel.hidden = true
-            extraTitle.hidden = true
+        }
+        
+        if billAmountInput.text == "" {
+            resultsView.hidden = true
+        } else {
+            resultsView.hidden = false
         }
     
     }
