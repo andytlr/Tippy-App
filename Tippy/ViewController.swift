@@ -39,7 +39,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func billAmountInputChanged(sender: AnyObject) {
-        print("LOL")
         
         var tipAmounts = [15.0, 18.0, 20.0]
         
@@ -57,7 +56,6 @@ class ViewController: UIViewController {
     @IBAction func tapBackground(sender: AnyObject) {
         view.endEditing(true)
     }
-    
     
 }
 
