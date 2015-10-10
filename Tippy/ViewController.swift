@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         return round(float * 10) / 10
     }
     
+    let tipAmounts = [15.0, 18.0, 20.0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,6 +46,10 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         billAmountInput.becomeFirstResponder()
+        
+        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
+        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
+        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
         if billAmountInput.text == "" || billAmountInput.text == "$" {
             resultsView.hidden = true
@@ -58,8 +64,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func billAmountInputChanged(sender: AnyObject) {
-        
-        var tipAmounts = [15.0, 18.0, 20.0]
         
         let tipPercentage = tipAmounts[tipPercentageSegmentedController.selectedSegmentIndex]
         
@@ -113,6 +117,16 @@ class ViewController: UIViewController {
         
         if billAmountInput.text == "" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             billAmountInput.text = "$"
+        }
+        
+        if roundSwitch.on {
+            tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
+            tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
+            tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
+        } else {
+            tipPercentageSegmentedController.setTitle("\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
+            tipPercentageSegmentedController.setTitle("\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
+            tipPercentageSegmentedController.setTitle("\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         }
     
     }
