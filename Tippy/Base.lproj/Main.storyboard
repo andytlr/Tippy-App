@@ -50,9 +50,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="W8C-mZ-wvX">
-                                        <rect key="frame" x="0.0" y="13" width="320" height="416"/>
+                                        <rect key="frame" x="0.0" y="13" width="320" height="316"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's 20% and an extra $3.20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZi-xj-Ib9">
+                                                <rect key="frame" x="0.0" y="121" width="320" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0lM-K8-uUM">
                                                 <rect key="frame" x="0.0" y="67" width="320" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -74,13 +81,6 @@
                                                     <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="giI-i5-SQm"/>
                                                 </connections>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's 20% and an extra $3.20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZi-xj-Ib9">
-                                                <rect key="frame" x="0.0" y="121" width="320" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" red="0.51058673858642578" green="0.51067829132080078" blue="0.51058101654052734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -91,12 +91,19 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.87082892656326294" blue="0.70818132162094116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.0" green="0.8628571629524231" blue="0.70847964286804199" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="64"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q9B-Rf-azK"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💵" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LVM-66-KlS">
+                                <rect key="frame" x="0.0" y="298" width="320" height="92"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -112,6 +119,7 @@
                     <connections>
                         <outlet property="billAmountInput" destination="RJw-Zm-wjt" id="Z1W-Cl-o25"/>
                         <outlet property="billTotalLabel" destination="0lM-K8-uUM" id="FDL-Gq-24B"/>
+                        <outlet property="noteMoji" destination="LVM-66-KlS" id="BQX-ki-Y1v"/>
                         <outlet property="percentageLabel" destination="sZi-xj-Ib9" id="T5J-5o-00C"/>
                         <outlet property="resultsView" destination="W8C-mZ-wvX" id="a4s-rE-IpE"/>
                         <outlet property="roundSwitch" destination="8og-R5-Dmf" id="k0O-sI-hp7"/>

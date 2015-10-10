@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultsView: UIView!
     
+    @IBOutlet weak var noteMoji: UILabel!
+    
     func formatMoney(cash: Double) -> String {
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
@@ -84,6 +86,7 @@ class ViewController: UIViewController {
         let roundedBillTotal = (billTotal - (billTotal % roundUpInIncrementsOf)) + roundUpInIncrementsOf
         let roundedTipAmount = tip + (roundedBillTotal - billTotal)
         let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / bill) * 100)
+        let roundedTipPercentStringified = String(round(roundedTipPercent)).stringByReplacingOccurrencesOfString(".0", withString: "")
         let extraPaid = roundedBillTotal - billTotal
         
         if roundSwitch.on {
@@ -91,7 +94,7 @@ class ViewController: UIViewController {
             billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
-                percentageLabel.text = "That's \(round(roundedTipPercent))% and an extra \(formatMoney(extraPaid))."
+                percentageLabel.text = "That's \(roundedTipPercentStringified)% and an extra \(formatMoney(extraPaid))."
             }
         } else {
             tipAmountLabel.text = "Tip: \(formatMoney(tip))"
@@ -101,8 +104,10 @@ class ViewController: UIViewController {
         
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             resultsView.hidden = true
+            noteMoji.hidden = false
         } else {
             resultsView.hidden = false
+            noteMoji.hidden = true
         }
         
         if billAmountInput.text == "" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
