@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         billAmountInput.becomeFirstResponder()
         
         if billAmountInput.text == "" {
@@ -104,7 +106,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapBackground(sender: AnyObject) {
-        view.endEditing(true)
+//        view.endEditing(true)
     }
 }
 
