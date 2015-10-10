@@ -11,9 +11,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var billAmountInput: UITextField!
-    
     @IBOutlet weak var tipPercentageSegmentedController: UISegmentedControl!
+    
+    @IBOutlet weak var billAmountInput: UITextField!
     
     @IBOutlet weak var tipAmountLabel: UILabel!
     
@@ -24,8 +24,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var roundSwitch: UISwitch!
     
     @IBOutlet weak var resultsView: UIView!
-    
-    @IBOutlet weak var noteMoji: UILabel!
     
     func formatMoney(cash: Double) -> String {
         let formatter = NSNumberFormatter()
@@ -52,11 +50,9 @@ class ViewController: UIViewController {
         tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
         tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
-        if billAmountInput.text == "" || billAmountInput.text == "$" {
-            resultsView.hidden = true
-        } else {
-            resultsView.hidden = false
-        }
+        resultsView.alpha = 0
+        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
+        resultsView.transform = CGAffineTransformMakeTranslation(0, 100)
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,11 +105,17 @@ class ViewController: UIViewController {
         }
         
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
-            resultsView.hidden = true
-            noteMoji.hidden = false
+            UIView.animateWithDuration(0.2, animations: {
+                self.resultsView.alpha = 0
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
+                self.resultsView.transform = CGAffineTransformMakeTranslation(0, 100)
+            })
         } else {
-            resultsView.hidden = false
-            noteMoji.hidden = true
+            UIView.animateWithDuration(0.2, animations: {
+                self.resultsView.alpha = 1
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.resultsView.transform = CGAffineTransformMakeTranslation(0, 0)
+            })
         }
         
         if billAmountInput.text == "" || billAmountInput.text == "$0" || billAmountInput.text == "$." {

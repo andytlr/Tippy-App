@@ -102,13 +102,6 @@
                                     <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q9B-Rf-azK"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LVM-66-KlS">
-                                <rect key="frame" x="0.0" y="298" width="320" height="92"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -122,9 +115,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="billAmountInput" destination="RJw-Zm-wjt" id="Z1W-Cl-o25"/>
+                        <outlet property="billAmountInput" destination="RJw-Zm-wjt" id="fHk-P6-2hB"/>
                         <outlet property="billTotalLabel" destination="0lM-K8-uUM" id="FDL-Gq-24B"/>
-                        <outlet property="noteMoji" destination="LVM-66-KlS" id="BQX-ki-Y1v"/>
                         <outlet property="percentageLabel" destination="sZi-xj-Ib9" id="T5J-5o-00C"/>
                         <outlet property="resultsView" destination="W8C-mZ-wvX" id="a4s-rE-IpE"/>
                         <outlet property="roundSwitch" destination="8og-R5-Dmf" id="k0O-sI-hp7"/>
