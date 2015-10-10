@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultsView: UIView!
     
+    @IBOutlet weak var wholeResultsView: UIView!
+    
     func formatMoney(cash: Double) -> String {
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
@@ -50,9 +52,10 @@ class ViewController: UIViewController {
         tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
         tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
-        resultsView.alpha = 0
-        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
-        resultsView.transform = CGAffineTransformMakeTranslation(0, 100)
+        wholeResultsView.alpha = 0
+        tipPercentageSegmentedController.alpha = 0
+        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
+        wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 80)
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,15 +109,17 @@ class ViewController: UIViewController {
         
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             UIView.animateWithDuration(0.2, animations: {
-                self.resultsView.alpha = 0
-                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
-                self.resultsView.transform = CGAffineTransformMakeTranslation(0, 100)
+                self.tipPercentageSegmentedController.alpha = 0
+                self.wholeResultsView.alpha = 0
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
+                self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 80)
             })
         } else {
             UIView.animateWithDuration(0.2, animations: {
-                self.resultsView.alpha = 1
+                self.tipPercentageSegmentedController.alpha = 1
+                self.wholeResultsView.alpha = 1
                 self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 0)
-                self.resultsView.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 0)
             })
         }
         
