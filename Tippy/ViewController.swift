@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var billAmountInput: UITextField!
     
+    @IBOutlet weak var introLabel: UITextView!
+    
     @IBOutlet weak var tipAmountLabel: UILabel!
     
     @IBOutlet weak var billTotalLabel: UILabel!
@@ -50,8 +52,14 @@ class ViewController: UIViewController {
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
-        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
+        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 90)
         wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
+        
+        introLabel.alpha = 0
+
+        UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+            self.introLabel.alpha = 1
+        }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,18 +99,20 @@ class ViewController: UIViewController {
         let tipPercentStringified = String(round(tipPercentage)).stringByReplacingOccurrencesOfString(".0", withString: "")
         let extraPaid = roundedBillTotal - billTotal
         
-        
-        
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
-            UIView.animateWithDuration(0.3, animations: {
-                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
+            UIView.animateWithDuration(0.3, delay: 0.0, options: [], animations: {
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 90)
                 self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
-            })
+            }, completion: nil)
+            UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+                self.introLabel.alpha = 1
+            }, completion: nil)
         } else {
-            UIView.animateWithDuration(0.3, animations: {
+            UIView.animateWithDuration(0.3, delay: 0.0, options: [], animations: {
                 self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 0)
                 self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 0)
-            })
+            }, completion: nil)
+            self.introLabel.alpha = 0
             tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
             billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {

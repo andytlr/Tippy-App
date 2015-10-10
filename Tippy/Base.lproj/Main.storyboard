@@ -75,7 +75,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.097714206231454007" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" placeholder="Bill" textAlignment="center" minimumFontSize="16" id="RJw-Zm-wjt">
-                                <rect key="frame" x="20" y="100" width="335" height="59"/>
+                                <rect key="frame" x="20" y="105" width="335" height="59"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,6 +85,13 @@
                                     <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q9B-Rf-azK"/>
                                 </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tippy calculates a tip and rounds your total up to an even dollar amount. What's the damage?" textAlignment="center" id="45G-sK-zxq">
+                                <rect key="frame" x="60" y="311" width="254" height="67"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.86684322357177734" blue="0.70833092927932739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -100,6 +107,7 @@
                     <connections>
                         <outlet property="billAmountInput" destination="RJw-Zm-wjt" id="fHk-P6-2hB"/>
                         <outlet property="billTotalLabel" destination="0lM-K8-uUM" id="FDL-Gq-24B"/>
+                        <outlet property="introLabel" destination="45G-sK-zxq" id="fFg-Q2-QEi"/>
                         <outlet property="percentageLabel" destination="sZi-xj-Ib9" id="T5J-5o-00C"/>
                         <outlet property="resultsView" destination="W8C-mZ-wvX" id="a4s-rE-IpE"/>
                         <outlet property="tipAmountLabel" destination="4rZ-Sx-AxR" id="dEG-ff-M4l"/>
@@ -114,7 +122,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="238" y="392"/>
+            <point key="canvasLocation" x="237.5" y="391.5"/>
         </scene>
     </scenes>
 </document>
