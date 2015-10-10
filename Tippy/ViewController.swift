@@ -96,8 +96,8 @@ class ViewController: UIViewController {
         let roundedBillTotal = (billTotal - (billTotal % roundUpInIncrementsOf)) + roundUpInIncrementsOf
         let roundedTipAmount = tip + (roundedBillTotal - billTotal)
         let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / bill) * 100)
-        let roundedTipPercentStringified = String(round(roundedTipPercent)).stringByReplacingOccurrencesOfString(".0", withString: "")
-        let tipPercentStringified = String(round(tipPercentage)).stringByReplacingOccurrencesOfString(".0", withString: "")
+        let roundedTipPercentStringified = String(roundedTipPercent).stringByReplacingOccurrencesOfString(".0", withString: "")
+        let tipPercentStringified = String(tipPercentage).stringByReplacingOccurrencesOfString(".0", withString: "")
         let extraPaid = roundedBillTotal - billTotal
         
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
             billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
-                percentageLabel.text = "That's \(roundedTipPercentStringified)%. Only \(formatMoney(extraPaid)) extra than \(tipPercentStringified)%."
+                percentageLabel.text = "That's \(roundedTipPercentStringified)%, only \(formatMoney(extraPaid)) extra than \(tipPercentStringified)%."
             }
         }
         
