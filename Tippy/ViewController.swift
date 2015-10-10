@@ -46,9 +46,9 @@ class ViewController: UIViewController {
         
         billAmountInput.becomeFirstResponder()
         
-        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
-        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
-        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
+        tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
+        tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
+        tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
         billAmountInput.transform = CGAffineTransformMakeTranslation(0, 120)
         wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 240)
@@ -88,6 +88,7 @@ class ViewController: UIViewController {
         let roundedTipAmount = tip + (roundedBillTotal - billTotal)
         let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / bill) * 100)
         let roundedTipPercentStringified = String(round(roundedTipPercent)).stringByReplacingOccurrencesOfString(".0", withString: "")
+        let tipPercentStringified = String(round(tipPercentage)).stringByReplacingOccurrencesOfString(".0", withString: "")
         let extraPaid = roundedBillTotal - billTotal
         
         
@@ -106,7 +107,7 @@ class ViewController: UIViewController {
             billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
-                percentageLabel.text = "That's \(roundedTipPercentStringified)% and only an extra \(formatMoney(extraPaid))."
+                percentageLabel.text = "That's \(roundedTipPercentStringified)% and only an extra \(formatMoney(extraPaid)) than tipping \(tipPercentStringified)%."
             }
         }
         
