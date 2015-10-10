@@ -50,8 +50,8 @@ class ViewController: UIViewController {
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
-        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 120)
-        wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 240)
+        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
+        wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,16 +95,16 @@ class ViewController: UIViewController {
         
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             UIView.animateWithDuration(0.3, animations: {
-                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 120)
-                self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 240)
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 100)
+                self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
             })
         } else {
             UIView.animateWithDuration(0.3, animations: {
                 self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 0)
                 self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 0)
             })
-            tipAmountLabel.text = "Tip: \(formatMoney(roundedTipAmount))"
-            billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
+            tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
+            billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
                 percentageLabel.text = "That's \(roundedTipPercentStringified)% and only an extra \(formatMoney(extraPaid)) than tipping \(tipPercentStringified)%."
