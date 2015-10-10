@@ -52,10 +52,11 @@ class ViewController: UIViewController {
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
-        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 90)
+        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
         wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
         
         introLabel.alpha = 0
+        introLabel.transform = CGAffineTransformMakeTranslation(0, 290)
 
         UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
             self.introLabel.alpha = 1
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
         
         if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             UIView.animateWithDuration(0.3, delay: 0.0, options: [], animations: {
-                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 90)
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
                 self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
             }, completion: nil)
             UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
@@ -117,7 +118,7 @@ class ViewController: UIViewController {
             billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
-                percentageLabel.text = "That's \(roundedTipPercentStringified)% and only an extra \(formatMoney(extraPaid)) than tipping \(tipPercentStringified)%."
+                percentageLabel.text = "That's \(roundedTipPercentStringified)%. Only \(formatMoney(extraPaid)) extra than \(tipPercentStringified)%."
             }
         }
         
