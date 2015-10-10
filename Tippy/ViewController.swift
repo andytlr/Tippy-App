@@ -11,9 +11,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var tipPercentageSegmentedController: UISegmentedControl!
+    
     @IBOutlet weak var billAmountInput: UITextField!
     
-    @IBOutlet weak var tipPercentageSegmentedController: UISegmentedControl!
+    @IBOutlet weak var introLabel: UITextView!
     
     @IBOutlet weak var tipAmountLabel: UILabel!
     
@@ -21,11 +23,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var percentageLabel: UILabel!
     
-    @IBOutlet weak var roundSwitch: UISwitch!
-    
     @IBOutlet weak var resultsView: UIView!
     
-    @IBOutlet weak var noteMoji: UILabel!
+    @IBOutlet weak var wholeResultsView: UIView!
     
     func formatMoney(cash: Double) -> String {
         let formatter = NSNumberFormatter()
@@ -48,15 +48,18 @@ class ViewController: UIViewController {
         
         billAmountInput.becomeFirstResponder()
         
-        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
-        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
-        tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
+        tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
+        tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
+        tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
-        if billAmountInput.text == "" || billAmountInput.text == "$" {
-            resultsView.hidden = true
-        } else {
-            resultsView.hidden = false
-        }
+        billAmountInput.transform = CGAffineTransformMakeTranslation(0, 90)
+        wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
+        
+        introLabel.alpha = 0
+
+        UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+            self.introLabel.alpha = 1
+        }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,41 +96,33 @@ class ViewController: UIViewController {
         let roundedTipAmount = tip + (roundedBillTotal - billTotal)
         let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / bill) * 100)
         let roundedTipPercentStringified = String(round(roundedTipPercent)).stringByReplacingOccurrencesOfString(".0", withString: "")
+        let tipPercentStringified = String(round(tipPercentage)).stringByReplacingOccurrencesOfString(".0", withString: "")
         let extraPaid = roundedBillTotal - billTotal
         
-        if roundSwitch.on {
-            tipAmountLabel.text = "Tip: \(formatMoney(roundedTipAmount))"
-            billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
+        if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
+            UIView.animateWithDuration(0.3, delay: 0.0, options: [], animations: {
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 90)
+                self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 220)
+            }, completion: nil)
+            UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+                self.introLabel.alpha = 1
+            }, completion: nil)
+        } else {
+            UIView.animateWithDuration(0.3, delay: 0.0, options: [], animations: {
+                self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 0)
+            }, completion: nil)
+            self.introLabel.alpha = 0
+            tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
+            billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
-                percentageLabel.text = "That's \(roundedTipPercentStringified)% and an extra \(formatMoney(extraPaid))."
+                percentageLabel.text = "That's \(roundedTipPercentStringified)% and only an extra \(formatMoney(extraPaid)) than tipping \(tipPercentStringified)%."
             }
-        } else {
-            tipAmountLabel.text = "Tip: \(formatMoney(tip))"
-            billTotalLabel.text = "Total: \(formatMoney(billTotal))"
-            percentageLabel.hidden = true
-        }
-        
-        if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
-            resultsView.hidden = true
-            noteMoji.hidden = false
-        } else {
-            resultsView.hidden = false
-            noteMoji.hidden = true
         }
         
         if billAmountInput.text == "" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             billAmountInput.text = "$"
-        }
-        
-        if roundSwitch.on {
-            tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
-            tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
-            tipPercentageSegmentedController.setTitle("~\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
-        } else {
-            tipPercentageSegmentedController.setTitle("\(Int(tipAmounts[0]))% Ok", forSegmentAtIndex: 0)
-            tipPercentageSegmentedController.setTitle("\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
-            tipPercentageSegmentedController.setTitle("\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         }
     
     }
