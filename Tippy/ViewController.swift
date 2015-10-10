@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
         billAmountInput.becomeFirstResponder()
         
-        if billAmountInput.text == "" {
+        if billAmountInput.text == "" || billAmountInput.text == "$" {
             resultsView.hidden = true
         } else {
             resultsView.hidden = false
@@ -60,7 +60,9 @@ class ViewController: UIViewController {
         
         let tipPercentage = tipAmounts[tipPercentageSegmentedController.selectedSegmentIndex]
         
-        let bill = NSString(string: billAmountInput.text!).doubleValue
+        let billWithDollarStripped = billAmountInput.text!.stringByReplacingOccurrencesOfString("$", withString: "")
+        
+        let bill = NSString(string: billWithDollarStripped).doubleValue
         let tip = (bill / 100) * tipPercentage
         let billTotal = bill + tip
         
@@ -87,9 +89,9 @@ class ViewController: UIViewController {
         if roundSwitch.on {
             tipAmountLabel.text = "Tip: \(formatMoney(roundedTipAmount))"
             billTotalLabel.text = "Total: \(formatMoney(roundedBillTotal))"
-            if billAmountInput.text != "" {
+            if billAmountInput.text != "" || bill == 0 {
                 percentageLabel.hidden = false
-                percentageLabel.text = "That's \(Int(round(roundedTipPercent)))% and an extra \(formatMoney(extraPaid))."
+                percentageLabel.text = "That's \(round(roundedTipPercent))% and an extra \(formatMoney(extraPaid))."
             }
         } else {
             tipAmountLabel.text = "Tip: \(formatMoney(tip))"
@@ -97,10 +99,14 @@ class ViewController: UIViewController {
             percentageLabel.hidden = true
         }
         
-        if billAmountInput.text == "" {
+        if billAmountInput.text == "" || billAmountInput.text == "$" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
             resultsView.hidden = true
         } else {
             resultsView.hidden = false
+        }
+        
+        if billAmountInput.text == "" || billAmountInput.text == "$0" || billAmountInput.text == "$." {
+            billAmountInput.text = "$"
         }
     
     }
