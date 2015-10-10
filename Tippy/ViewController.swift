@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     }
     
     let tipAmounts = [15.0, 18.0, 20.0]
+//    var tippieAmounts = ["Ok": 15.0, "Good": 18.0, "Great": 20.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
