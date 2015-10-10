@@ -52,6 +52,9 @@ class ViewController: UIViewController {
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[1]))% Good", forSegmentAtIndex: 1)
         tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[2]))% Great", forSegmentAtIndex: 2)
         
+        tipAmountLabel.font = UIFont.monospacedDigitSystemFontOfSize(24, weight: UIFontWeightLight)
+        billTotalLabel.font = UIFont.monospacedDigitSystemFontOfSize(24, weight: UIFontWeightLight)
+        
         billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
         wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 180)
         
