@@ -101,7 +101,6 @@
                         <color key="backgroundColor" red="0.5714607834815979" green="0.0" blue="0.4329693615436554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="LaH-Jr-0lK" appends="YES" id="Aqs-H6-ebs"/>
                             <outletCollection property="gestureRecognizers" destination="34t-N7-bi0" appends="YES" id="59E-az-5CE"/>
                             <outletCollection property="gestureRecognizers" destination="fTQ-eg-h0L" appends="YES" id="A3h-OB-kwk"/>
                             <outletCollection property="gestureRecognizers" destination="tEF-ww-gXC" appends="YES" id="1dQ-Vw-cb7"/>
@@ -125,11 +124,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="LaH-Jr-0lK">
-                    <connections>
-                        <action selector="tapBackground:" destination="BYZ-38-t0r" id="4nt-bv-2sc"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="down" id="tEF-ww-gXC">
                     <connections>
                         <action selector="swipeView:" destination="BYZ-38-t0r" id="4bQ-80-Knn"/>
