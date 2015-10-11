@@ -132,6 +132,11 @@ class ViewController: UIViewController {
         }
     
     }
+    
+    @IBAction func swipeView(sender: AnyObject) {
+        billAmountInput.text = "$"
+        billAmountInputChanged(NSString(string: "$"))
+    }
 
     @IBAction func tapBackground(sender: AnyObject) {
 //        view.endEditing(true)

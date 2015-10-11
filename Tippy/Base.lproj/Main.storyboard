@@ -85,6 +85,7 @@
                                 <rect key="frame" x="0.0" y="121" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
@@ -93,10 +94,11 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.86684322357177734" blue="0.70833092927932739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.75883209705352783" green="0.0" blue="0.7656712532043457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="LaH-Jr-0lK" appends="YES" id="Aqs-H6-ebs"/>
+                            <outletCollection property="gestureRecognizers" destination="34t-N7-bi0" appends="YES" id="59E-az-5CE"/>
                         </connections>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -121,6 +123,11 @@
                         <action selector="tapBackground:" destination="BYZ-38-t0r" id="4nt-bv-2sc"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="34t-N7-bi0">
+                    <connections>
+                        <action selector="swipeView:" destination="BYZ-38-t0r" id="ZK1-u8-dXM"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="237.5" y="391.5"/>
         </scene>
