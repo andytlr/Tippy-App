@@ -84,10 +84,10 @@ class ViewController: UIViewController {
         
         var roundUpInIncrementsOf = 0.0
         
-        switch bill {
-        case 1...5:
+        switch billTotal {
+        case 1...10:
             roundUpInIncrementsOf = 0.50
-        case 5...50:
+        case 10...50:
             roundUpInIncrementsOf = 1.0
         case 50...100:
             roundUpInIncrementsOf = 2.0
