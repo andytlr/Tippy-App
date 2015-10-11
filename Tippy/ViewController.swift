@@ -118,6 +118,8 @@ class ViewController: UIViewController {
                 roundUpInIncrementsOf = 1.0
             }
         } else {
+            
+            // Round in bigger increments for higher values if you're tipping 18% or 20%.
             switch billTotal {
             case 1...10:
                 roundUpInIncrementsOf = 0.50
