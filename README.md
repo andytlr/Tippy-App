@@ -2,15 +2,16 @@
 
 iOS app to calculate a tip and round up the total to a sane number. If the bill was $13.37 and you tip 18%, the total would be $16 instead of $15.78.
 
-Time spent: ~10 hours spent in total
+Time spent: About 2 hours to get it working and about 15 hours tinkering.
 
 ## Completed user stories:
 
  * [x] Required: User can enter in their bill amount
  * [x] Required: User can calculate a tip based on multiple percentage values
- * [ ] Optional: Bill splitting
- * [x] Optional: Input formatting
- * [x] Optional: Animations
+ * [ ] Bill splitting
+ * [x] Formatting all the numbers
+ * [x] Animations
+ * [x] Gestures
 
 ## Notes:
 
