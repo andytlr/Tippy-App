@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     }
     
     // Set a NUX state
+    var nuxShownTimes = 0
     var showNux = true
     
     // Tip amounts and labels
@@ -70,6 +71,7 @@ class ViewController: UIViewController {
         if showNux == true {
             UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
                 self.introLabel.alpha = 1
+                self.nuxShownTimes++
             }, completion: nil)
         } else {
             introLabel.alpha = 0
@@ -83,6 +85,12 @@ class ViewController: UIViewController {
     
     // Whenever the input changes. Do all the things.
     @IBAction func billAmountInputChanged(sender: AnyObject) {
+        
+        // Don't show the nux after 3 times (including the first).
+        // Also won't be shown again if tapped.
+        if nuxShownTimes >= 3 {
+            showNux = false
+        }
         
         // Set the tip percentage to use to the one selected in the segmented control
         let tipPercentage = tipAmounts[tipPercentageSegmentedController.selectedSegmentIndex]
@@ -152,6 +160,7 @@ class ViewController: UIViewController {
             if showNux == true {
                 UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
                     self.introLabel.alpha = 1
+                    self.nuxShownTimes++
                 }, completion: nil)
             }
             
