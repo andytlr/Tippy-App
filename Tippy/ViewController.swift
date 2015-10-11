@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         
         billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
         wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 180)
+        wholeResultsView.alpha = 0
         
         introLabel.alpha = 0
         introLabel.transform = CGAffineTransformMakeTranslation(0, 290)
@@ -113,12 +114,16 @@ class ViewController: UIViewController {
             UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
                 self.introLabel.alpha = 1
             }, completion: nil)
+            UIView.animateWithDuration(0, delay: 0.2, options: [], animations: {
+                self.wholeResultsView.alpha = 0
+            }, completion: nil)
         } else {
             UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.3, options: [], animations: {
                 self.billAmountInput.transform = CGAffineTransformMakeTranslation(0, 0)
                 self.wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 0)
             }, completion: nil)
             self.introLabel.alpha = 0
+            wholeResultsView.alpha = 1
             tipAmountLabel.text = "\(formatMoney(roundedTipAmount))"
             billTotalLabel.text = "\(formatMoney(roundedBillTotal))"
             if billAmountInput.text != "" || bill == 0 {
