@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         return round(float * 10) / 10
     }
     
+    // Set a NUX state
+    var showNux = true
+    
     // Tip amounts and labels
     let tipAmounts = [15.0, 18.0, 20.0]
     let tipLabels = ["Ok", "Good", "Great"]
@@ -61,13 +64,16 @@ class ViewController: UIViewController {
         billAmountInput.transform = CGAffineTransformMakeTranslation(0, 80)
         wholeResultsView.transform = CGAffineTransformMakeTranslation(0, 180)
         wholeResultsView.alpha = 0
-        introLabel.alpha = 0
         introLabel.transform = CGAffineTransformMakeTranslation(0, 290)
 
         // Animate in NUX after delay
-        UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
-            self.introLabel.alpha = 1
-        }, completion: nil)
+        if showNux == true {
+            UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+                self.introLabel.alpha = 1
+            }, completion: nil)
+        } else {
+            introLabel.alpha = 0
+        }
     }
 
     // ¯\_(ツ)_/¯ I didn't write this. Something about memory warnings.
@@ -143,9 +149,11 @@ class ViewController: UIViewController {
                 }, completion: nil)
             
             // Show the NUX tip after a delay
-            UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
-                self.introLabel.alpha = 1
-            }, completion: nil)
+            if showNux == true {
+                UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+                    self.introLabel.alpha = 1
+                }, completion: nil)
+            }
             
         } else {
             
@@ -185,15 +193,18 @@ class ViewController: UIViewController {
     
     }
     
+    @IBAction func tapIntroLabel(sender: AnyObject) {
+        // Hide the intro label
+        introLabel.alpha = 0
+        showNux = false
+    }
+    
     // Swipe down on the whole view...
     @IBAction func swipeView(sender: AnyObject) {
         
         // Reset the input. For some reason I need both of these.
         billAmountInput.text = "$"
         billAmountInputChanged(NSString(string: "$"))
-        
-        // Hide the intro label
-        introLabel.alpha = 0
     }
 }
 

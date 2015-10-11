@@ -89,9 +89,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tippy calculates a tip and rounds your total up to a sane amount. What's the damage?" textAlignment="center" selectable="NO" id="45G-sK-zxq">
                                 <rect key="frame" x="69" y="32" width="236" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xry-Sv-V42" appends="YES" id="tLe-hk-KDl"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.5714607834815979" green="0.0" blue="0.4329693615436554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,6 +150,11 @@
                         <action selector="swipeView:" destination="BYZ-38-t0r" id="2jA-z1-QKw"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Xry-Sv-V42">
+                    <connections>
+                        <action selector="tapIntroLabel:" destination="BYZ-38-t0r" id="ZTd-LH-t2v"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="237.5" y="391.5"/>
         </scene>
