@@ -23,21 +23,21 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's 20% and an extra $3.20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZi-xj-Ib9">
                                                 <rect key="frame" x="20" y="84" width="335" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <color key="textColor" red="0.57103586196899414" green="0.0" blue="0.43133082985877991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0lM-K8-uUM">
                                                 <rect key="frame" x="107" y="39" width="248" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                                 <color key="textColor" red="0.57103586196899414" green="0.0" blue="0.43133082985877991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4rZ-Sx-AxR">
                                                 <rect key="frame" x="107" y="9" width="248" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                                 <color key="textColor" red="0.57103586196899414" green="0.0" blue="0.43133082985877991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -58,14 +58,14 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="51H-SP-ffj">
                                                 <rect key="frame" x="19" y="39" width="80" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                                 <color key="textColor" red="0.57103586196899414" green="0.0" blue="0.43133082985877991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTH-1d-jLu">
                                                 <rect key="frame" x="19" y="9" width="80" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                                 <color key="textColor" red="0.57103586196899414" green="0.0" blue="0.43133082985877991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -74,25 +74,25 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.92000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tippy calculates a tip and rounds your total up to an even dollar amount. What's the damage?" textAlignment="center" id="45G-sK-zxq">
-                                <rect key="frame" x="60" y="32" width="254" height="67"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" placeholder="Bill" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="16" id="RJw-Zm-wjt">
                                 <rect key="frame" x="0.0" y="121" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="64"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                                 <connections>
                                     <action selector="billAmountInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q9B-Rf-azK"/>
                                 </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tippy calculates a tip and rounds your total up to a sane amount. What's the damage?" textAlignment="center" selectable="NO" id="45G-sK-zxq">
+                                <rect key="frame" x="69" y="32" width="236" height="67"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.5714607834815979" green="0.0" blue="0.4329693615436554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -126,16 +126,6 @@
                         <action selector="tapBackground:" destination="BYZ-38-t0r" id="4nt-bv-2sc"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="34t-N7-bi0">
-                    <connections>
-                        <action selector="swipeView:" destination="BYZ-38-t0r" id="ZK1-u8-dXM"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="fTQ-eg-h0L">
-                    <connections>
-                        <action selector="swipeView:" destination="BYZ-38-t0r" id="2jA-z1-QKw"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="down" id="tEF-ww-gXC">
                     <connections>
                         <action selector="swipeView:" destination="BYZ-38-t0r" id="4bQ-80-Knn"/>
@@ -144,6 +134,16 @@
                 <swipeGestureRecognizer direction="up" id="9vC-n4-VGd">
                     <connections>
                         <action selector="swipeView:" destination="BYZ-38-t0r" id="eYb-hF-mDG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="34t-N7-bi0">
+                    <connections>
+                        <action selector="swipeView:" destination="BYZ-38-t0r" id="ZK1-u8-dXM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="fTQ-eg-h0L">
+                    <connections>
+                        <action selector="swipeView:" destination="BYZ-38-t0r" id="2jA-z1-QKw"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
