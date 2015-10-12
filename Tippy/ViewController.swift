@@ -69,10 +69,7 @@ class ViewController: UIViewController {
 
         // Animate in NUX after delay
         if showNux == true {
-            UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
-                self.introLabel.alpha = 1
-                self.nuxShownTimes++
-            }, completion: nil)
+            introLabel.alpha = 1
         } else {
             introLabel.alpha = 0
         }
@@ -88,7 +85,7 @@ class ViewController: UIViewController {
         
         // Don't show the nux after 3 times (including the first).
         // Also won't be shown again if tapped.
-        if nuxShownTimes >= 3 {
+        if nuxShownTimes > 2 {
             showNux = false
         }
         
@@ -172,7 +169,7 @@ class ViewController: UIViewController {
             
             // Show the NUX tip after a delay
             if showNux == true {
-                UIView.animateWithDuration(0.15, delay: 5.0, options: [], animations: {
+                UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: {
                     self.introLabel.alpha = 1
                     self.nuxShownTimes++
                 }, completion: nil)
