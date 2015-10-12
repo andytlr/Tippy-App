@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         // Set labels for segmented control
         var segIndex = 0
         while segIndex < tipAmounts.count {
-            tipPercentageSegmentedController.setTitle(">\(Int(tipAmounts[segIndex]))% \(tipLabels[segIndex])", forSegmentAtIndex: segIndex)
+            tipPercentageSegmentedController.setTitle("\(tipLabels[segIndex])", forSegmentAtIndex: segIndex)
             segIndex++
         }
         
@@ -198,7 +198,7 @@ class ViewController: UIViewController {
                 percentageLabel.hidden = false
                 
                 // Sentence that explains what's happening under results.
-                percentageLabel.text = "That's \(roundedTipPercentStringified)%, only \(formatMoney(extraPaid)) extra than \(tipPercentStringified)%."
+                percentageLabel.text = "Rounded to \(roundedTipPercentStringified)%, only \(formatMoney(extraPaid)) more than \(tipPercentStringified)%."
             }
         }
         
