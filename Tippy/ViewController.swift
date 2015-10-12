@@ -120,14 +120,12 @@ class ViewController: UIViewController {
             switch billTotal {
             case 1...10:
                 roundUpInIncrementsOf = 0.50
-            case 10...50:
+            case 10...250:
                 roundUpInIncrementsOf = 1.0
-            case 50...100:
+            case 250...500:
                 roundUpInIncrementsOf = 2.0
-            case 100...300:
-                roundUpInIncrementsOf = 5.0
             default:
-                roundUpInIncrementsOf = 10.0
+                roundUpInIncrementsOf = 5.0
             }
         }
         
