@@ -163,7 +163,7 @@ class ViewController: UIViewController {
             // Was strange seeing the results if you shook the phone and the keyboard dismisssed. Or behind the black transparent keyboard.
             UIView.animateWithDuration(0, delay: 0.2, options: [], animations: {
                 self.wholeResultsView.alpha = 0
-                }, completion: nil)
+            }, completion: nil)
             
             // Show the NUX tip after a delay
             if showNux == true {
