@@ -101,10 +101,7 @@
                         <color key="backgroundColor" red="0.0" green="0.37479731440544128" blue="0.49161553382873535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="34t-N7-bi0" appends="YES" id="59E-az-5CE"/>
-                            <outletCollection property="gestureRecognizers" destination="fTQ-eg-h0L" appends="YES" id="A3h-OB-kwk"/>
                             <outletCollection property="gestureRecognizers" destination="tEF-ww-gXC" appends="YES" id="1dQ-Vw-cb7"/>
-                            <outletCollection property="gestureRecognizers" destination="9vC-n4-VGd" appends="YES" id="Kwx-mK-g4o"/>
                         </connections>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -127,21 +124,6 @@
                 <swipeGestureRecognizer direction="down" id="tEF-ww-gXC">
                     <connections>
                         <action selector="swipeView:" destination="BYZ-38-t0r" id="4bQ-80-Knn"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="up" id="9vC-n4-VGd">
-                    <connections>
-                        <action selector="swipeView:" destination="BYZ-38-t0r" id="eYb-hF-mDG"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="34t-N7-bi0">
-                    <connections>
-                        <action selector="swipeView:" destination="BYZ-38-t0r" id="ZK1-u8-dXM"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="fTQ-eg-h0L">
-                    <connections>
-                        <action selector="swipeView:" destination="BYZ-38-t0r" id="2jA-z1-QKw"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer id="Xry-Sv-V42">
