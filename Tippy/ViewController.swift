@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         
         // Don't show the nux after 3 times (including the first).
         // Also won't be shown again if tapped.
-        if nuxShownTimes > 2 {
+        if nuxShownTimes >= 2 {
             showNux = false
         }
         
@@ -216,7 +216,6 @@ class ViewController: UIViewController {
     @IBAction func tapIntroLabel(sender: AnyObject) {
         // Hide the intro label
         introLabel.alpha = 0
-        showNux = false
     }
     
     // Swipe down on the whole view...
