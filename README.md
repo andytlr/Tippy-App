@@ -1,5 +1,7 @@
 # Tip Calculator
 
+![](Tippy/Assets.xcassets/AppIcon.appiconset/appicon-berg-horizon-blue@2.png)
+
 iOS app to calculate a tip and round up the total to a sane number. If the bill was $13.37 and you tip 18%, the total would be $16 instead of $15.78.
 
 Time spent: About 2 hours to get it working and about 15 hours tinkering.
