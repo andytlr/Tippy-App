@@ -44,11 +44,12 @@
                         <group width="1" alignment="left" id="WsX-VB-F3r">
                             <items>
                                 <label alignment="left" text="Good" id="wAO-Jp-5pe"/>
-                                <label alignment="right" text="0%" textAlignment="right" id="aaW-Iz-jYT"/>
+                                <label alignment="right" text="18%" textAlignment="right" id="aaW-Iz-jYT"/>
                             </items>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="percentLabel" destination="aaW-Iz-jYT" id="fDR-I3-sLw"/>
                         <outlet property="serviceQualityLabel" destination="wAO-Jp-5pe" id="GwT-up-BO0"/>
                     </connections>
                 </controller>

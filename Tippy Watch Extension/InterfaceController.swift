@@ -16,7 +16,11 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var serviceQualityLabel: WKInterfaceLabel!
     
+    @IBOutlet var percentLabel: WKInterfaceLabel!
+    
     var bill = "$"
+    var percentDouble = 18.0
+//    var percentString = 
     
     @IBAction func seven() {
         bill = bill + "7"
@@ -79,15 +83,21 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func tapOk() {
+        percentDouble = 15.0
         serviceQualityLabel.setText("OK")
+        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
     }
     
     @IBAction func tapGood() {
+        percentDouble = 18.0
         serviceQualityLabel.setText("Good")
+        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
     }
     
     @IBAction func tapGreat() {
+        percentDouble = 20.0
         serviceQualityLabel.setText("Great")
+        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
     }
     
     override func awakeWithContext(context: AnyObject?) {
