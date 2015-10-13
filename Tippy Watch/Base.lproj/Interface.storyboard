@@ -10,66 +10,83 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Value goes here" id="qEh-Tp-4NO"/>
+                        <label alignment="center" text="Value goes here" textAlignment="center" id="qEh-Tp-4NO"/>
+                        <group width="1" alignment="left" id="PWh-SP-LYI">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="7" id="bBG-Lx-s6y">
+                                    <connections>
+                                        <action selector="seven" destination="AgC-eL-Hgc" id="bMV-bc-cr4"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="8" id="lDo-oB-Fhq">
+                                    <connections>
+                                        <action selector="eight" destination="AgC-eL-Hgc" id="vxe-Gq-oUE"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="9" id="eMC-gy-ljz">
+                                    <connections>
+                                        <action selector="nine" destination="AgC-eL-Hgc" id="FeQ-Kt-ucU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                         <group width="1" alignment="left" id="Yz8-RK-cjn">
                             <items>
-                                <button alignment="left" title="1" id="N6S-cx-Rql">
+                                <button width="0.33000000000000002" alignment="left" title="4" id="N6S-cx-Rql">
                                     <connections>
-                                        <action selector="tapOne" destination="AgC-eL-Hgc" id="6Qg-PC-Atv"/>
+                                        <action selector="four" destination="AgC-eL-Hgc" id="GAS-5s-i5a"/>
                                     </connections>
                                 </button>
-                                <button alignment="left" title="5" id="70Q-zc-pyW">
+                                <button width="0.33000000000000002" alignment="left" title="5" id="70Q-zc-pyW">
                                     <connections>
-                                        <action selector="addFive" destination="AgC-eL-Hgc" id="l96-DH-TH6"/>
+                                        <action selector="five" destination="AgC-eL-Hgc" id="rhW-UP-tIF"/>
                                     </connections>
                                 </button>
-                                <button alignment="left" title="10" id="WzY-v0-sar">
+                                <button width="0.33000000000000002" alignment="left" title="6" id="WzY-v0-sar">
                                     <connections>
-                                        <action selector="addTen" destination="AgC-eL-Hgc" id="kQL-b4-Efl"/>
-                                    </connections>
-                                </button>
-                                <button alignment="left" title="20" id="Md4-71-lYH">
-                                    <connections>
-                                        <action selector="addTwenty" destination="AgC-eL-Hgc" id="Pcv-le-XoU"/>
-                                    </connections>
-                                </button>
-                                <button alignment="left" title="50" id="dS0-uA-dzR">
-                                    <connections>
-                                        <action selector="addFifty" destination="AgC-eL-Hgc" id="hCs-bc-qhg"/>
+                                        <action selector="six" destination="AgC-eL-Hgc" id="xgy-fw-9bI"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="M7v-TW-Spo">
+                        <group width="1" alignment="left" id="jSM-r1-DD1">
                             <items>
-                                <button alignment="left" title=".1" id="gj8-Ju-fHp">
+                                <button width="0.33000000000000002" alignment="left" title="1" id="UlC-J9-9WR">
                                     <connections>
-                                        <action selector="addOneCent" destination="AgC-eL-Hgc" id="Wqp-oE-06Y"/>
+                                        <action selector="one" destination="AgC-eL-Hgc" id="Eom-Lm-NV4"/>
                                     </connections>
                                 </button>
-                                <button alignment="left" title=".10" id="UQa-US-rGc">
+                                <button width="0.33000000000000002" alignment="left" title="2" id="7oh-av-fCz">
                                     <connections>
-                                        <action selector="addTenCents" destination="AgC-eL-Hgc" id="Lw2-OH-pgN"/>
+                                        <action selector="two" destination="AgC-eL-Hgc" id="8me-bR-jqO"/>
                                     </connections>
                                 </button>
-                                <button alignment="left" title=".25" id="djG-kJ-n0c">
+                                <button width="0.33000000000000002" alignment="left" title="3" id="43s-S7-l1r">
                                     <connections>
-                                        <action selector="addTwentyFiveCents" destination="AgC-eL-Hgc" id="Crc-Nj-lvl"/>
-                                    </connections>
-                                </button>
-                                <button alignment="left" title=".50" id="PrU-Ot-vbX">
-                                    <connections>
-                                        <action selector="addFiddyCent" destination="AgC-eL-Hgc" id="a53-PO-DcU"/>
+                                        <action selector="three" destination="AgC-eL-Hgc" id="E1p-FT-9Oa"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Next" id="5On-h0-coE"/>
-                        <button width="1" alignment="left" title="Clear" id="o0s-Xo-XEF">
-                            <connections>
-                                <action selector="clear" destination="AgC-eL-Hgc" id="pku-Hw-CRl"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="left" id="pXJ-mB-EJb">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="0" id="IKv-aE-l5W">
+                                    <connections>
+                                        <action selector="zero" destination="AgC-eL-Hgc" id="G4N-YO-ALL"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="·" id="eFR-6v-S56">
+                                    <connections>
+                                        <action selector="dot" destination="AgC-eL-Hgc" id="d5N-Cd-0o8"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="C" id="0NN-oW-3N5">
+                                    <connections>
+                                        <action selector="clear" destination="AgC-eL-Hgc" id="UHS-p0-4BY"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="addOne" destination="N6S-cx-Rql" id="WaQ-0q-Unm"/>

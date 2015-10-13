@@ -14,56 +14,66 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet var valueLabel: WKInterfaceLabel!
     
-    var bill = 0.0
+    var bill = "$"
     
-    @IBAction func tapOne() {
-        bill = bill + 1.0
-        valueLabel.setText("$\(bill)")
+    @IBAction func seven() {
+        bill = bill + "7"
+        valueLabel.setText("\(bill)")
     }
     
-    @IBAction func addFive() {
-        bill = bill + 5.0
-        valueLabel.setText("$\(bill)")
+    @IBAction func eight() {
+        bill = bill + "8"
+        valueLabel.setText("\(bill)")
     }
     
-    @IBAction func addTen() {
-        bill = bill + 10.0
-        valueLabel.setText("$\(bill)")
+    @IBAction func nine() {
+        bill = bill + "9"
+        valueLabel.setText("\(bill)")
     }
     
-    @IBAction func addTwenty() {
-        bill = bill + 20.0
-        valueLabel.setText("$\(bill)")
+    @IBAction func four() {
+        bill = bill + "4"
+        valueLabel.setText("\(bill)")
+    }
+    
+    @IBAction func five() {
+        bill = bill + "5"
+        valueLabel.setText("\(bill)")
+    }
+    
+    @IBAction func six() {
+        bill = bill + "6"
+        valueLabel.setText("\(bill)")
+    }
+    
+    @IBAction func one() {
+        bill = bill + "1"
+        valueLabel.setText("\(bill)")
     }
 
-    @IBAction func addFifty() {
-        bill = bill + 50.0
-        valueLabel.setText("$\(bill)")
+    @IBAction func two() {
+        bill = bill + "2"
+        valueLabel.setText("\(bill)")
     }
     
-    @IBAction func addOneCent() {
-        bill = bill + 0.01
-        valueLabel.setText("$\(bill)")
+    @IBAction func three() {
+        bill = bill + "3"
+        valueLabel.setText("\(bill)")
     }
     
-    @IBAction func addTenCents() {
-        bill = bill + 0.1
-        valueLabel.setText("$\(bill)")
+    @IBAction func zero() {
+        bill = bill + "0"
+        valueLabel.setText("\(bill)")
     }
     
-    @IBAction func addTwentyFiveCents() {
-        bill = bill + 0.25
-        valueLabel.setText("$\(bill)")
-    }
-    
-    @IBAction func addFiddyCent() {
-        bill = bill + 0.5
-        valueLabel.setText("$\(bill)")
+    @IBAction func dot() {
+        bill = bill + "."
+        valueLabel.setText("\(bill)")
     }
     
     @IBAction func clear() {
-        bill = 0.0
-        valueLabel.setText("$\(bill)")
+        bill = "$"
+        valueLabel.setText("\(bill)")
     }
     
     override func awakeWithContext(context: AnyObject?) {
@@ -71,7 +81,7 @@ class InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         
-        valueLabel.setText("$\(bill)")
+        valueLabel.setText("\(bill)")
     }
 
     override func willActivate() {
