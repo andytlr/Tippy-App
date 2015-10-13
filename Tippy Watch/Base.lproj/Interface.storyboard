@@ -8,7 +8,29 @@
         <!--Interface Controller-->
         <scene sceneID="hMI-lO-ZhP">
             <objects>
-                <controller hidesWhenLoading="NO" id="x3w-8I-Nia"/>
+                <controller hidesWhenLoading="NO" id="x3w-8I-Nia">
+                    <items>
+                        <group width="1" alignment="left" id="z4B-Vx-uP3">
+                            <items>
+                                <label alignment="left" text="Tip" id="KbA-uM-kxP"/>
+                                <label alignment="right" text="$0.00" textAlignment="right" id="eae-fQ-3UE"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="IE9-oi-Zfq">
+                            <items>
+                                <label alignment="left" text="Total" id="Z64-dc-kPn"/>
+                                <label alignment="right" text="$0.00" textAlignment="right" id="Ldz-Wr-3Z4"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="WsX-VB-F3r">
+                            <items>
+                                <label alignment="left" text="Good" id="wAO-Jp-5pe"/>
+                                <label alignment="right" text="18%" textAlignment="right" id="aaW-Iz-jYT"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="left" value="18" minimum="15" maximum="20" steps="3" id="uZs-DY-jLt"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="465" y="233"/>
         </scene>
