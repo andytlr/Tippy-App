@@ -6,11 +6,18 @@
     </dependencies>
     <scenes>
         <!--Interface Controller-->
+        <scene sceneID="hMI-lO-ZhP">
+            <objects>
+                <controller hidesWhenLoading="NO" id="x3w-8I-Nia"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="233"/>
+        </scene>
+        <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Value goes here" textAlignment="center" id="qEh-Tp-4NO"/>
+                        <label alignment="center" text="Value" textAlignment="center" id="qEh-Tp-4NO"/>
                         <group width="1" alignment="left" id="PWh-SP-LYI">
                             <items>
                                 <button width="0.33000000000000002" alignment="left" title="7" id="bBG-Lx-s6y">
@@ -91,6 +98,7 @@
                     <connections>
                         <outlet property="addOne" destination="N6S-cx-Rql" id="WaQ-0q-Unm"/>
                         <outlet property="valueLabel" destination="qEh-Tp-4NO" id="9g0-MH-9PH"/>
+                        <segue destination="x3w-8I-Nia" kind="relationship" relationship="nextPage" id="vkw-wn-Nni"/>
                     </connections>
                 </controller>
             </objects>
