@@ -24,9 +24,21 @@
                         </group>
                         <group width="1" height="0.20999999999999999" alignment="left" id="LXJ-Jq-GFe">
                             <items>
-                                <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q"/>
-                                <button width="0.33000000000000002" height="1" alignment="center" title="👍" id="NV5-Z1-0Bn"/>
-                                <button width="0.33000000000000002" height="1" alignment="right" title="👌" id="lAa-Pp-fZH"/>
+                                <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q">
+                                    <connections>
+                                        <action selector="tapOk" destination="x3w-8I-Nia" id="pCZ-wj-mFs"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="👍" id="NV5-Z1-0Bn">
+                                    <connections>
+                                        <action selector="tapGood" destination="x3w-8I-Nia" id="9C6-SF-DmY"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="👌" id="lAa-Pp-fZH">
+                                    <connections>
+                                        <action selector="tapGreat" destination="x3w-8I-Nia" id="ClH-1X-PcS"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="WsX-VB-F3r">
@@ -36,6 +48,9 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="serviceQualityLabel" destination="wAO-Jp-5pe" id="GwT-up-BO0"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="466" y="252"/>

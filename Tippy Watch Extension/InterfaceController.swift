@@ -14,6 +14,8 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet var valueLabel: WKInterfaceLabel!
     
+    @IBOutlet var serviceQualityLabel: WKInterfaceLabel!
+    
     var bill = "$"
     
     @IBAction func seven() {
@@ -74,6 +76,18 @@ class InterfaceController: WKInterfaceController {
     @IBAction func clear() {
         bill = "$"
         valueLabel.setText("\(bill)")
+    }
+    
+    @IBAction func tapOk() {
+        serviceQualityLabel.setText("OK")
+    }
+    
+    @IBAction func tapGood() {
+        serviceQualityLabel.setText("Good")
+    }
+    
+    @IBAction func tapGreat() {
+        serviceQualityLabel.setText("Great")
     }
     
     override func awakeWithContext(context: AnyObject?) {
