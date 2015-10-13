@@ -22,11 +22,17 @@
                                 <label alignment="right" text="$0.00" textAlignment="right" id="Ldz-Wr-3Z4"/>
                             </items>
                         </group>
-                        <slider width="1" alignment="left" value="1" minimum="1" maximum="2" steps="3" id="uZs-DY-jLt"/>
+                        <group width="1" height="0.20999999999999999" alignment="left" id="LXJ-Jq-GFe">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q"/>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="👍" id="NV5-Z1-0Bn"/>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="👌" id="lAa-Pp-fZH"/>
+                            </items>
+                        </group>
                         <group width="1" alignment="left" id="WsX-VB-F3r">
                             <items>
                                 <label alignment="left" text="Good" id="wAO-Jp-5pe"/>
-                                <label alignment="right" text="18%" textAlignment="right" id="aaW-Iz-jYT"/>
+                                <label alignment="right" text="0%" textAlignment="right" id="aaW-Iz-jYT"/>
                             </items>
                         </group>
                     </items>
@@ -118,7 +124,6 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="addOne" destination="N6S-cx-Rql" id="WaQ-0q-Unm"/>
                         <outlet property="valueLabel" destination="qEh-Tp-4NO" id="9g0-MH-9PH"/>
                         <segue destination="x3w-8I-Nia" kind="relationship" relationship="nextPage" id="vkw-wn-Nni"/>
                     </connections>
