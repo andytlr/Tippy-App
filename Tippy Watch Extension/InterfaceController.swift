@@ -80,8 +80,6 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        
-        valueLabel.setText("\(bill)")
     }
 
     override func willActivate() {

@@ -8,7 +8,7 @@
         <!--Interface Controller-->
         <scene sceneID="hMI-lO-ZhP">
             <objects>
-                <controller hidesWhenLoading="NO" id="x3w-8I-Nia">
+                <controller hidesWhenLoading="NO" id="x3w-8I-Nia" customClass="InterfaceController" customModule="Tippy_Watch_Extension">
                     <items>
                         <group width="1" alignment="left" id="z4B-Vx-uP3">
                             <items>
@@ -39,7 +39,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Value" textAlignment="center" id="qEh-Tp-4NO"/>
+                        <label alignment="center" text="Bill Amount" textAlignment="center" id="qEh-Tp-4NO"/>
                         <group width="1" height="0.20999999999999999" alignment="left" id="PWh-SP-LYI">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="7" id="bBG-Lx-s6y">
