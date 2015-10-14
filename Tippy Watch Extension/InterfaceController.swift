@@ -41,6 +41,7 @@ class InterfaceController: WKInterfaceController {
     
     func initView() {
         valueLabel.setText("Bill Amount")
+        valueLabel.setTextColor(UIColor.init(white: 1.0, alpha: 0.5))
         tipValueLabel.setText("\(formatMoney(0.0))")
         totalValueLabel.setText("\(formatMoney(0.0))")
         serviceQualityLabel.setText("Rounded to")
@@ -77,6 +78,7 @@ class InterfaceController: WKInterfaceController {
         if bill == "$" {
             initView()
         } else {
+            valueLabel.setTextColor(UIColor.init(white: 1.0, alpha: 1))
             let tip = (billDouble! / 100) * percentDouble
             let billTotal = billDouble! + tip
             

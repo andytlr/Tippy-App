@@ -10,7 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Bill Amount" textAlignment="center" id="qEh-Tp-4NO"/>
+                        <label alignment="center" text="Bill Amount" textAlignment="center" id="qEh-Tp-4NO">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
                         <group width="1" height="0.23999999999999999" alignment="left" id="PWh-SP-LYI">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="7" id="bBG-Lx-s6y">
@@ -75,7 +77,7 @@
                                         <action selector="clear" destination="AgC-eL-Hgc" id="UHS-p0-4BY"/>
                                     </connections>
                                 </button>
-                                <button width="0.33000000000000002" height="1" alignment="center" title="·" id="fcm-sS-Eiv">
+                                <button width="0.33000000000000002" height="1" alignment="left" title="·" id="fcm-sS-Eiv">
                                     <connections>
                                         <action selector="dot" destination="AgC-eL-Hgc" id="WPh-iA-5x6"/>
                                     </connections>
