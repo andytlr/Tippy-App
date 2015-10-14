@@ -10,7 +10,6 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="QjA-4g-UpF"/>
                         <label alignment="center" text="Bill Amount" textAlignment="center" id="qEh-Tp-4NO"/>
                         <group width="1" height="28" alignment="left" id="PWh-SP-LYI">
                             <items>
@@ -127,7 +126,6 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="derp" destination="QjA-4g-UpF" id="mLG-1s-c1a"/>
                         <outlet property="goodButton" destination="NV5-Z1-0Bn" id="11b-O8-MsT"/>
                         <outlet property="greatButton" destination="lAa-Pp-fZH" id="qHL-b0-ZKX"/>
                         <outlet property="okButton" destination="Mrm-KG-X6q" id="ab3-hD-ABS"/>

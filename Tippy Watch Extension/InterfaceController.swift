@@ -11,8 +11,6 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
-    @IBOutlet var derp: WKInterfaceLabel!
     
     @IBOutlet var valueLabel: WKInterfaceLabel!
     
@@ -102,8 +100,6 @@ class InterfaceController: WKInterfaceController {
             tipValueLabel.setText("\(formatMoney(roundedTipAmount))")
             totalValueLabel.setText("\(formatMoney(roundedBillTotal))")
             percentLabel.setText("\(roundedTipPercent)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
-            
-            derp.setText("\(billDouble)")
         }
     }
     
