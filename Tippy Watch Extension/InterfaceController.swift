@@ -167,7 +167,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func dot() {
-        if bill != "$" {
+        if bill != "$" && bill.containsString(".") == false {
             bill = bill + "."
             valueLabel.setText("\(bill)")
             updateTotal()
