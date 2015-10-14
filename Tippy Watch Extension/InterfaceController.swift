@@ -71,17 +71,28 @@ class InterfaceController: WKInterfaceController {
     
     var bill = "$"
     var percentDouble = 18.0
-    var roundUpInIncrementsOf = 1.0
+    var roundUpInIncrementsOf = 0.0
 
     func updateTotal() {
         let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
-
         
         if bill == "$" {
             initView()
         } else {
             let tip = (billDouble! / 100) * percentDouble
             let billTotal = billDouble! + tip
+            
+            switch billTotal {
+            case 1...10:
+                roundUpInIncrementsOf = 0.50
+            case 10...250:
+                roundUpInIncrementsOf = 1.0
+            case 250...500:
+                roundUpInIncrementsOf = 2.0
+            default:
+                roundUpInIncrementsOf = 5.0
+            }
+            
             let roundedBillTotal = (billTotal - (billTotal % roundUpInIncrementsOf)) + roundUpInIncrementsOf
             let roundedTipAmount = tip + (roundedBillTotal - billTotal)
             let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / billDouble!) * 100)
