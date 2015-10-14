@@ -11,8 +11,28 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    override func awakeWithContext(context: AnyObject?) {
+        super.awakeWithContext(context)
+        
+        // Configure interface objects here.
+    }
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+    }
+    
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
 
     @IBOutlet var valueLabel: WKInterfaceLabel!
+    
+    @IBOutlet var tipValueLabel: WKInterfaceLabel!
+    
+    @IBOutlet var totalValueLabel: WKInterfaceLabel!
     
     @IBOutlet var serviceQualityLabel: WKInterfaceLabel!
     
@@ -103,6 +123,14 @@ class InterfaceController: WKInterfaceController {
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        
+        //        let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
+        //
+        //        var tip = (billDouble! / 100) * percentDouble
+        //        var billTotal = billDouble! + tip
+        //
+        //        tipValueLabel.setText("\(tip)")
+        //        totalValueLabel.setText("\(billTotal)")
     }
     
     @IBAction func tapGreat() {
@@ -112,22 +140,6 @@ class InterfaceController: WKInterfaceController {
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
-    }
-    
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-    }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
     }
 
 }

@@ -720,6 +720,7 @@
 				C265F3821BCCA1EA00E9576A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C265F3851BCCA1EA00E9576A /* Build configuration list for PBXNativeTarget "Tippy Watch" */ = {
 			isa = XCConfigurationList;
@@ -728,6 +729,7 @@
 				C265F3801BCCA1EA00E9576A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CF6E141BC6F54D00354243 /* Build configuration list for PBXProject "Tippy" */ = {
 			isa = XCConfigurationList;
