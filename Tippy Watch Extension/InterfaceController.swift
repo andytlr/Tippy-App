@@ -36,6 +36,12 @@ class InterfaceController: WKInterfaceController {
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        percentLabel.setText("0%")
+    }
+    
+    // Round a double to one decimal place
+    func roundToOneDecimalPlace(float: Double) -> Double {
+        return round(float * 10) / 10
     }
     
     override func awakeWithContext(context: AnyObject?) {
@@ -65,18 +71,24 @@ class InterfaceController: WKInterfaceController {
     
     var bill = "$"
     var percentDouble = 18.0
+    var roundUpInIncrementsOf = 1.0
 
     func updateTotal() {
         let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
+
         
         if bill == "$" {
             initView()
         } else {
             let tip = (billDouble! / 100) * percentDouble
             let billTotal = billDouble! + tip
+            let roundedBillTotal = (billTotal - (billTotal % roundUpInIncrementsOf)) + roundUpInIncrementsOf
+            let roundedTipAmount = tip + (roundedBillTotal - billTotal)
+            let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / billDouble!) * 100)
             
-            tipValueLabel.setText("\(formatMoney(tip))")
-            totalValueLabel.setText("\(formatMoney(billTotal))")
+            tipValueLabel.setText("\(formatMoney(roundedTipAmount))")
+            totalValueLabel.setText("\(formatMoney(roundedBillTotal))")
+            percentLabel.setText("\(roundedTipPercent)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         }
     }
     
