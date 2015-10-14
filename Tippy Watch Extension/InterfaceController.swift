@@ -22,9 +22,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var totalValueLabel: WKInterfaceLabel!
     
-    @IBOutlet var serviceQualityLabel: WKInterfaceLabel!
-    
-    @IBOutlet var percentLabel: WKInterfaceLabel!
+    @IBOutlet var percentSentence: WKInterfaceLabel!
     
     @IBOutlet var okButton: WKInterfaceButton!
     
@@ -44,8 +42,8 @@ class InterfaceController: WKInterfaceController {
         valueLabel.setTextColor(UIColor.init(white: 1.0, alpha: 0.5))
         tipValueLabel.setText("\(formatMoney(0.0))")
         totalValueLabel.setText("\(formatMoney(0.0))")
-        serviceQualityLabel.setText("Rounded to")
-        percentLabel.setText("0%")
+        percentSentence.setText("")
+        percentSentence.setTextColor(UIColor.init(white: 1.0, alpha: 0.5))
     }
     
     // Round a double to one decimal place
@@ -96,10 +94,12 @@ class InterfaceController: WKInterfaceController {
             let roundedBillTotal = (billTotal - (billTotal % roundUpInIncrementsOf)) + roundUpInIncrementsOf
             let roundedTipAmount = tip + (roundedBillTotal - billTotal)
             let roundedTipPercent = roundToOneDecimalPlace((roundedTipAmount / billDouble!) * 100)
+            let extraPaid = roundedBillTotal - billTotal
             
             tipValueLabel.setText("\(formatMoney(roundedTipAmount))")
             totalValueLabel.setText("\(formatMoney(roundedBillTotal))")
-            percentLabel.setText("\(roundedTipPercent)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
+            
+            percentSentence.setText("Rounded to \(roundedTipPercent)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%, only \(formatMoney(extraPaid)) more than \(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%.")
         }
     }
     
@@ -185,7 +185,6 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
         percentDouble = 15.0
-        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
     }
@@ -196,7 +195,6 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
         percentDouble = 18.0
-        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
     }
@@ -207,7 +205,6 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         
         percentDouble = 20.0
-        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
     }
