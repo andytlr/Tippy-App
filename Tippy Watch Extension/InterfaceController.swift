@@ -61,11 +61,16 @@ class InterfaceController: WKInterfaceController {
     func updateTotal() {
         let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
         
-        let tip = (billDouble! / 100) * percentDouble
-        let billTotal = billDouble! + tip
-        
-        tipValueLabel.setText("\(formatMoney(tip))")
-        totalValueLabel.setText("\(formatMoney(billTotal))")
+        if bill == "$" {
+            tipValueLabel.setText("\(formatMoney(0.0))")
+            totalValueLabel.setText("\(formatMoney(0.0))")
+        } else {
+            let tip = (billDouble! / 100) * percentDouble
+            let billTotal = billDouble! + tip
+            
+            tipValueLabel.setText("\(formatMoney(tip))")
+            totalValueLabel.setText("\(formatMoney(billTotal))")
+        }
     }
     
     @IBAction func seven() {
