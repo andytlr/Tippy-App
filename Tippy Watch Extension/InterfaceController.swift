@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var derp: WKInterfaceLabel!
+    
     @IBOutlet var valueLabel: WKInterfaceLabel!
     
     @IBOutlet var tipValueLabel: WKInterfaceLabel!
@@ -74,7 +76,7 @@ class InterfaceController: WKInterfaceController {
     var roundUpInIncrementsOf = 0.0
 
     func updateTotal() {
-        let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
+        let billDouble = Double(bill.stringByReplacingOccurrencesOfString("$", withString: ""))
         
         if bill == "$" {
             initView()
@@ -100,6 +102,8 @@ class InterfaceController: WKInterfaceController {
             tipValueLabel.setText("\(formatMoney(roundedTipAmount))")
             totalValueLabel.setText("\(formatMoney(roundedBillTotal))")
             percentLabel.setText("\(roundedTipPercent)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
+            
+            derp.setText("\(billDouble)")
         }
     }
     
