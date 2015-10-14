@@ -11,7 +11,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Bill Amount" textAlignment="center" id="qEh-Tp-4NO"/>
-                        <group width="1" height="28" alignment="left" id="PWh-SP-LYI">
+                        <group width="1" height="0.23999999999999999" alignment="left" id="PWh-SP-LYI">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="7" id="bBG-Lx-s6y">
                                     <connections>
@@ -30,7 +30,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="28" alignment="left" id="Yz8-RK-cjn">
+                        <group width="1" height="0.23999999999999999" alignment="left" id="Yz8-RK-cjn">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="4" id="N6S-cx-Rql">
                                     <connections>
@@ -49,7 +49,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="28" alignment="left" id="jSM-r1-DD1">
+                        <group width="1" height="0.23999999999999999" alignment="left" id="jSM-r1-DD1">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="1" id="UlC-J9-9WR">
                                     <connections>
@@ -68,7 +68,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="28" alignment="left" id="pXJ-mB-EJb">
+                        <group width="1" height="0.23999999999999999" alignment="left" id="pXJ-mB-EJb">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="right" title="C" id="0NN-oW-3N5">
                                     <connections>
@@ -87,7 +87,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="28" alignment="left" id="LXJ-Jq-GFe">
+                        <group width="1" height="0.23999999999999999" alignment="left" id="LXJ-Jq-GFe">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q">
                                     <connections>
