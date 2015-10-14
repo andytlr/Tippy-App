@@ -70,19 +70,19 @@
                         </group>
                         <group width="1" height="28" alignment="left" id="pXJ-mB-EJb">
                             <items>
-                                <button width="0.33000000000000002" height="1" alignment="left" title="0" id="IKv-aE-l5W">
-                                    <connections>
-                                        <action selector="zero" destination="AgC-eL-Hgc" id="G4N-YO-ALL"/>
-                                    </connections>
-                                </button>
-                                <button width="0.33000000000000002" height="1" alignment="center" title="·" id="eFR-6v-S56">
-                                    <connections>
-                                        <action selector="dot" destination="AgC-eL-Hgc" id="d5N-Cd-0o8"/>
-                                    </connections>
-                                </button>
                                 <button width="0.33000000000000002" height="1" alignment="right" title="C" id="0NN-oW-3N5">
                                     <connections>
                                         <action selector="clear" destination="AgC-eL-Hgc" id="UHS-p0-4BY"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="·" id="fcm-sS-Eiv">
+                                    <connections>
+                                        <action selector="dot" destination="AgC-eL-Hgc" id="WPh-iA-5x6"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="0" id="eFR-6v-S56">
+                                    <connections>
+                                        <action selector="zero" destination="AgC-eL-Hgc" id="TEJ-hM-4tO"/>
                                     </connections>
                                 </button>
                             </items>
