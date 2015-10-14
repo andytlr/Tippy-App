@@ -25,4 +25,6 @@ I didn't add splitting because splitting whole numbers is easy and it adds compl
 
 ![Video Walkthrough](demo.gif)
 
+![Watch app](watch.gif)
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).

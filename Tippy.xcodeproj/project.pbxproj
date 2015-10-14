@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C265F3681BCCA1EA00E9576A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C265F3661BCCA1EA00E9576A /* Interface.storyboard */; };
+		C265F36A1BCCA1EA00E9576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C265F3691BCCA1EA00E9576A /* Assets.xcassets */; };
+		C265F3711BCCA1EA00E9576A /* Tippy Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C265F3701BCCA1EA00E9576A /* Tippy Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C265F3761BCCA1EA00E9576A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265F3751BCCA1EA00E9576A /* InterfaceController.swift */; };
+		C265F3781BCCA1EA00E9576A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265F3771BCCA1EA00E9576A /* ExtensionDelegate.swift */; };
+		C265F37A1BCCA1EA00E9576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C265F3791BCCA1EA00E9576A /* Assets.xcassets */; };
+		C265F37E1BCCA1EA00E9576A /* Tippy Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C265F3641BCCA1EA00E9576A /* Tippy Watch.app */; };
 		C2CF6E1D1BC6F54D00354243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CF6E1C1BC6F54D00354243 /* AppDelegate.swift */; };
 		C2CF6E1F1BC6F54D00354243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CF6E1E1BC6F54D00354243 /* ViewController.swift */; };
 		C2CF6E221BC6F54D00354243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CF6E201BC6F54D00354243 /* Main.storyboard */; };
@@ -17,6 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C265F3721BCCA1EA00E9576A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2CF6E111BC6F54D00354243 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C265F36F1BCCA1EA00E9576A;
+			remoteInfo = "Tippy Watch Extension";
+		};
+		C265F37C1BCCA1EA00E9576A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2CF6E111BC6F54D00354243 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C265F3631BCCA1EA00E9576A;
+			remoteInfo = "Tippy Watch";
+		};
 		C2CF6E2E1BC6F54D00354243 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2CF6E111BC6F54D00354243 /* Project object */;
@@ -33,7 +54,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C265F3841BCCA1EA00E9576A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C265F3711BCCA1EA00E9576A /* Tippy Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C265F3861BCCA1EA00E9576A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C265F37E1BCCA1EA00E9576A /* Tippy Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C265F3641BCCA1EA00E9576A /* Tippy Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tippy Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C265F3671BCCA1EA00E9576A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C265F3691BCCA1EA00E9576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C265F36B1BCCA1EA00E9576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C265F3701BCCA1EA00E9576A /* Tippy Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tippy Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C265F3751BCCA1EA00E9576A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C265F3771BCCA1EA00E9576A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C265F3791BCCA1EA00E9576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C265F37B1BCCA1EA00E9576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CF6E191BC6F54D00354243 /* Tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CF6E1C1BC6F54D00354243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2CF6E1E1BC6F54D00354243 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +105,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C265F36D1BCCA1EA00E9576A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2CF6E161BC6F54D00354243 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,12 +136,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C265F3651BCCA1EA00E9576A /* Tippy Watch */ = {
+			isa = PBXGroup;
+			children = (
+				C265F3661BCCA1EA00E9576A /* Interface.storyboard */,
+				C265F3691BCCA1EA00E9576A /* Assets.xcassets */,
+				C265F36B1BCCA1EA00E9576A /* Info.plist */,
+			);
+			path = "Tippy Watch";
+			sourceTree = "<group>";
+		};
+		C265F3741BCCA1EA00E9576A /* Tippy Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C265F3751BCCA1EA00E9576A /* InterfaceController.swift */,
+				C265F3771BCCA1EA00E9576A /* ExtensionDelegate.swift */,
+				C265F3791BCCA1EA00E9576A /* Assets.xcassets */,
+				C265F37B1BCCA1EA00E9576A /* Info.plist */,
+			);
+			path = "Tippy Watch Extension";
+			sourceTree = "<group>";
+		};
 		C2CF6E101BC6F54D00354243 = {
 			isa = PBXGroup;
 			children = (
 				C2CF6E1B1BC6F54D00354243 /* Tippy */,
 				C2CF6E301BC6F54D00354243 /* TippyTests */,
 				C2CF6E3B1BC6F54D00354243 /* TippyUITests */,
+				C265F3651BCCA1EA00E9576A /* Tippy Watch */,
+				C265F3741BCCA1EA00E9576A /* Tippy Watch Extension */,
 				C2CF6E1A1BC6F54D00354243 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +175,8 @@
 				C2CF6E191BC6F54D00354243 /* Tippy.app */,
 				C2CF6E2D1BC6F54D00354243 /* TippyTests.xctest */,
 				C2CF6E381BC6F54D00354243 /* TippyUITests.xctest */,
+				C265F3641BCCA1EA00E9576A /* Tippy Watch.app */,
+				C265F3701BCCA1EA00E9576A /* Tippy Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +215,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C265F3631BCCA1EA00E9576A /* Tippy Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C265F3851BCCA1EA00E9576A /* Build configuration list for PBXNativeTarget "Tippy Watch" */;
+			buildPhases = (
+				C265F3621BCCA1EA00E9576A /* Resources */,
+				C265F3841BCCA1EA00E9576A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C265F3731BCCA1EA00E9576A /* PBXTargetDependency */,
+			);
+			name = "Tippy Watch";
+			productName = "Tippy Watch";
+			productReference = C265F3641BCCA1EA00E9576A /* Tippy Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C265F36F1BCCA1EA00E9576A /* Tippy Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C265F3831BCCA1EA00E9576A /* Build configuration list for PBXNativeTarget "Tippy Watch Extension" */;
+			buildPhases = (
+				C265F36C1BCCA1EA00E9576A /* Sources */,
+				C265F36D1BCCA1EA00E9576A /* Frameworks */,
+				C265F36E1BCCA1EA00E9576A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tippy Watch Extension";
+			productName = "Tippy Watch Extension";
+			productReference = C265F3701BCCA1EA00E9576A /* Tippy Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		C2CF6E181BC6F54D00354243 /* Tippy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2CF6E411BC6F54D00354243 /* Build configuration list for PBXNativeTarget "Tippy" */;
@@ -135,10 +256,12 @@
 				C2CF6E151BC6F54D00354243 /* Sources */,
 				C2CF6E161BC6F54D00354243 /* Frameworks */,
 				C2CF6E171BC6F54D00354243 /* Resources */,
+				C265F3861BCCA1EA00E9576A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C265F37D1BCCA1EA00E9576A /* PBXTargetDependency */,
 			);
 			name = Tippy;
 			productName = Tippy;
@@ -190,6 +313,14 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Andy Taylor";
 				TargetAttributes = {
+					C265F3631BCCA1EA00E9576A = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 7JJG8MJLCH;
+					};
+					C265F36F1BCCA1EA00E9576A = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 7JJG8MJLCH;
+					};
 					C2CF6E181BC6F54D00354243 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 7JJG8MJLCH;
@@ -220,11 +351,30 @@
 				C2CF6E181BC6F54D00354243 /* Tippy */,
 				C2CF6E2C1BC6F54D00354243 /* TippyTests */,
 				C2CF6E371BC6F54D00354243 /* TippyUITests */,
+				C265F3631BCCA1EA00E9576A /* Tippy Watch */,
+				C265F36F1BCCA1EA00E9576A /* Tippy Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C265F3621BCCA1EA00E9576A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C265F36A1BCCA1EA00E9576A /* Assets.xcassets in Resources */,
+				C265F3681BCCA1EA00E9576A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C265F36E1BCCA1EA00E9576A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C265F37A1BCCA1EA00E9576A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2CF6E171BC6F54D00354243 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +402,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C265F36C1BCCA1EA00E9576A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C265F3781BCCA1EA00E9576A /* ExtensionDelegate.swift in Sources */,
+				C265F3761BCCA1EA00E9576A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2CF6E151BC6F54D00354243 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +439,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C265F3731BCCA1EA00E9576A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C265F36F1BCCA1EA00E9576A /* Tippy Watch Extension */;
+			targetProxy = C265F3721BCCA1EA00E9576A /* PBXContainerItemProxy */;
+		};
+		C265F37D1BCCA1EA00E9576A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C265F3631BCCA1EA00E9576A /* Tippy Watch */;
+			targetProxy = C265F37C1BCCA1EA00E9576A /* PBXContainerItemProxy */;
+		};
 		C2CF6E2F1BC6F54D00354243 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C2CF6E181BC6F54D00354243 /* Tippy */;
@@ -293,6 +462,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C265F3661BCCA1EA00E9576A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C265F3671BCCA1EA00E9576A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		C2CF6E201BC6F54D00354243 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -312,6 +489,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C265F37F1BCCA1EA00E9576A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Tippy_Watch_Extension;
+				INFOPLIST_FILE = "Tippy Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = andytaylor.Tippy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		C265F3801BCCA1EA00E9576A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Tippy_Watch_Extension;
+				INFOPLIST_FILE = "Tippy Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = andytaylor.Tippy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		C265F3811BCCA1EA00E9576A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Tippy Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andytaylor.Tippy.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		C265F3821BCCA1EA00E9576A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Tippy Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andytaylor.Tippy.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		C2CF6E3F1BC6F54D00354243 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -472,6 +713,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C265F3831BCCA1EA00E9576A /* Build configuration list for PBXNativeTarget "Tippy Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C265F3811BCCA1EA00E9576A /* Debug */,
+				C265F3821BCCA1EA00E9576A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C265F3851BCCA1EA00E9576A /* Build configuration list for PBXNativeTarget "Tippy Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C265F37F1BCCA1EA00E9576A /* Debug */,
+				C265F3801BCCA1EA00E9576A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C2CF6E141BC6F54D00354243 /* Build configuration list for PBXProject "Tippy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

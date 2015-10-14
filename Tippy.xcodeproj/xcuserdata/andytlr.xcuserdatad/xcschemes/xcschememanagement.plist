@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Tippy Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Tippy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C265F3631BCCA1EA00E9576A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C2CF6E181BC6F54D00354243</key>
 		<dict>
 			<key>primary</key>

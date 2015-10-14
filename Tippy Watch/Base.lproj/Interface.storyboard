@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tippy_Watch" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Bill Amount" textAlignment="center" id="qEh-Tp-4NO"/>
+                        <group width="1" height="28" alignment="left" id="PWh-SP-LYI">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" title="7" id="bBG-Lx-s6y">
+                                    <connections>
+                                        <action selector="seven" destination="AgC-eL-Hgc" id="bMV-bc-cr4"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="8" id="lDo-oB-Fhq">
+                                    <connections>
+                                        <action selector="eight" destination="AgC-eL-Hgc" id="vxe-Gq-oUE"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="9" id="eMC-gy-ljz">
+                                    <connections>
+                                        <action selector="nine" destination="AgC-eL-Hgc" id="FeQ-Kt-ucU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="28" alignment="left" id="Yz8-RK-cjn">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" title="4" id="N6S-cx-Rql">
+                                    <connections>
+                                        <action selector="four" destination="AgC-eL-Hgc" id="GAS-5s-i5a"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="5" id="70Q-zc-pyW">
+                                    <connections>
+                                        <action selector="five" destination="AgC-eL-Hgc" id="rhW-UP-tIF"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="6" id="WzY-v0-sar">
+                                    <connections>
+                                        <action selector="six" destination="AgC-eL-Hgc" id="xgy-fw-9bI"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="28" alignment="left" id="jSM-r1-DD1">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" title="1" id="UlC-J9-9WR">
+                                    <connections>
+                                        <action selector="one" destination="AgC-eL-Hgc" id="Eom-Lm-NV4"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="2" id="7oh-av-fCz">
+                                    <connections>
+                                        <action selector="two" destination="AgC-eL-Hgc" id="8me-bR-jqO"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="3" id="43s-S7-l1r">
+                                    <connections>
+                                        <action selector="three" destination="AgC-eL-Hgc" id="E1p-FT-9Oa"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="28" alignment="left" id="pXJ-mB-EJb">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="C" id="0NN-oW-3N5">
+                                    <connections>
+                                        <action selector="clear" destination="AgC-eL-Hgc" id="UHS-p0-4BY"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="·" id="fcm-sS-Eiv">
+                                    <connections>
+                                        <action selector="dot" destination="AgC-eL-Hgc" id="WPh-iA-5x6"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="0" id="eFR-6v-S56">
+                                    <connections>
+                                        <action selector="zero" destination="AgC-eL-Hgc" id="TEJ-hM-4tO"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="z4B-Vx-uP3">
+                            <items>
+                                <label alignment="left" text="Tip" id="KbA-uM-kxP"/>
+                                <label alignment="right" text="$0.00" textAlignment="right" id="eae-fQ-3UE"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="IE9-oi-Zfq">
+                            <items>
+                                <label alignment="left" text="Total" id="Z64-dc-kPn"/>
+                                <label alignment="right" text="$0.00" textAlignment="right" id="Ldz-Wr-3Z4"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="WsX-VB-F3r">
+                            <items>
+                                <label alignment="left" text="Good" id="wAO-Jp-5pe"/>
+                                <label alignment="right" text="18%" textAlignment="right" id="aaW-Iz-jYT"/>
+                            </items>
+                        </group>
+                        <group width="1" height="28" alignment="left" id="LXJ-Jq-GFe">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q">
+                                    <connections>
+                                        <action selector="tapOk" destination="AgC-eL-Hgc" id="QMY-P1-w1F"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="center" title="👌" id="NV5-Z1-0Bn">
+                                    <connections>
+                                        <action selector="tapGood" destination="AgC-eL-Hgc" id="Upk-XK-V8t"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="right" title="👍" id="lAa-Pp-fZH">
+                                    <connections>
+                                        <action selector="tapGreat" destination="AgC-eL-Hgc" id="ybO-5J-pbv"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="goodButton" destination="NV5-Z1-0Bn" id="11b-O8-MsT"/>
+                        <outlet property="greatButton" destination="lAa-Pp-fZH" id="qHL-b0-ZKX"/>
+                        <outlet property="okButton" destination="Mrm-KG-X6q" id="ab3-hD-ABS"/>
+                        <outlet property="percentLabel" destination="aaW-Iz-jYT" id="eZD-Jt-jnp"/>
+                        <outlet property="serviceQualityLabel" destination="wAO-Jp-5pe" id="Rdg-DF-Nx9"/>
+                        <outlet property="tipValueLabel" destination="eae-fQ-3UE" id="BnV-ln-OlK"/>
+                        <outlet property="totalValueLabel" destination="Ldz-Wr-3Z4" id="ueC-ak-vjW"/>
+                        <outlet property="valueLabel" destination="qEh-Tp-4NO" id="9g0-MH-9PH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="297" y="252"/>
+        </scene>
+    </scenes>
+</document>

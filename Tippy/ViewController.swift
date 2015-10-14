@@ -103,30 +103,16 @@ class ViewController: UIViewController {
         // Initialize empty double
         var roundUpInIncrementsOf = 0.0
         
-        // If you've set the tip amount to the lowest (15%), set different rounding amounts so it's always close to 15%.
-        // E.g. if the service is average then don't round up more than you have to.
-        if tipPercentageSegmentedController.selectedSegmentIndex == 0 {
-            
-            // Set what increments to round up in depending on the total.
-            switch billTotal {
-            case 1...10:
-                roundUpInIncrementsOf = 0.50
-            default:
-                roundUpInIncrementsOf = 1.0
-            }
-        } else {
-            
-            // Round in bigger increments for higher values if you're tipping 18% or 20%.
-            switch billTotal {
-            case 1...10:
-                roundUpInIncrementsOf = 0.50
-            case 10...250:
-                roundUpInIncrementsOf = 1.0
-            case 250...500:
-                roundUpInIncrementsOf = 2.0
-            default:
-                roundUpInIncrementsOf = 5.0
-            }
+        // Set what increments to round up in depending on the total.
+        switch billTotal {
+        case 1...10:
+            roundUpInIncrementsOf = 0.50
+        case 10...250:
+            roundUpInIncrementsOf = 1.0
+        case 250...500:
+            roundUpInIncrementsOf = 2.0
+        default:
+            roundUpInIncrementsOf = 5.0
         }
         
         // Get the final bill including rounding
