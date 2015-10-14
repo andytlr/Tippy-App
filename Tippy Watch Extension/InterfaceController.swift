@@ -36,6 +36,7 @@ class InterfaceController: WKInterfaceController {
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        serviceQualityLabel.setText("Rounded")
         percentLabel.setText("0%")
     }
     
@@ -185,7 +186,7 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
         percentDouble = 15.0
-        serviceQualityLabel.setText("Ok")
+//        serviceQualityLabel.setText("Ok")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
@@ -197,7 +198,7 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
         percentDouble = 18.0
-        serviceQualityLabel.setText("Good")
+//        serviceQualityLabel.setText("Good")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
@@ -209,7 +210,7 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         
         percentDouble = 20.0
-        serviceQualityLabel.setText("Great")
+//        serviceQualityLabel.setText("Great")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
