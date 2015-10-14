@@ -98,7 +98,7 @@
                                 </connections>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.37479731440544128" blue="0.49161553382873535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.37469610571861267" blue="0.49564141035079956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tEF-ww-gXC" appends="YES" id="1dQ-Vw-cb7"/>

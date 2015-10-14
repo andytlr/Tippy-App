@@ -87,24 +87,6 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="z4B-Vx-uP3">
-                            <items>
-                                <label alignment="left" text="Tip" id="KbA-uM-kxP"/>
-                                <label alignment="right" text="$0.00" textAlignment="right" id="eae-fQ-3UE"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="IE9-oi-Zfq">
-                            <items>
-                                <label alignment="left" text="Total" id="Z64-dc-kPn"/>
-                                <label alignment="right" text="$0.00" textAlignment="right" id="Ldz-Wr-3Z4"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="WsX-VB-F3r">
-                            <items>
-                                <label alignment="left" text="Good" id="wAO-Jp-5pe"/>
-                                <label alignment="right" text="18%" textAlignment="right" id="aaW-Iz-jYT"/>
-                            </items>
-                        </group>
                         <group width="1" height="28" alignment="left" id="LXJ-Jq-GFe">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q">
@@ -122,6 +104,24 @@
                                         <action selector="tapGreat" destination="AgC-eL-Hgc" id="ybO-5J-pbv"/>
                                     </connections>
                                 </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="z4B-Vx-uP3">
+                            <items>
+                                <label alignment="left" text="Tip" id="KbA-uM-kxP"/>
+                                <label alignment="right" text="$0.00" textAlignment="right" id="eae-fQ-3UE"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="IE9-oi-Zfq">
+                            <items>
+                                <label alignment="left" text="Total" id="Z64-dc-kPn"/>
+                                <label alignment="right" text="$0.00" textAlignment="right" id="Ldz-Wr-3Z4"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="WsX-VB-F3r">
+                            <items>
+                                <label alignment="left" text="Rounded to" id="wAO-Jp-5pe"/>
+                                <label alignment="right" text="18%" textAlignment="right" id="aaW-Iz-jYT"/>
                             </items>
                         </group>
                     </items>

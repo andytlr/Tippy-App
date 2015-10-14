@@ -12,6 +12,10 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
+    var bill = "$"
+    var percentDouble = 18.0
+    var roundUpInIncrementsOf = 0.0
+    
     @IBOutlet var valueLabel: WKInterfaceLabel!
     
     @IBOutlet var tipValueLabel: WKInterfaceLabel!
@@ -28,15 +32,18 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var greatButton: WKInterfaceButton!
     
+    // Function to format a double as money
+    func formatMoney(cash: Double) -> String {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        return formatter.stringFromNumber(cash)!
+    }
+    
     func initView() {
         valueLabel.setText("Bill Amount")
         tipValueLabel.setText("\(formatMoney(0.0))")
         totalValueLabel.setText("\(formatMoney(0.0))")
-        
-        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
-        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
-        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
-        serviceQualityLabel.setText("Rounded")
+        serviceQualityLabel.setText("Rounded to")
         percentLabel.setText("0%")
     }
     
@@ -51,6 +58,7 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
         
         initView()
+        tapGood()
     }
     
     override func willActivate() {
@@ -62,17 +70,6 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    // Function to format a double as money
-    func formatMoney(cash: Double) -> String {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = .CurrencyStyle
-        return formatter.stringFromNumber(cash)!
-    }
-    
-    var bill = "$"
-    var percentDouble = 18.0
-    var roundUpInIncrementsOf = 0.0
 
     func updateTotal() {
         let billDouble = Double(bill.stringByReplacingOccurrencesOfString("$", withString: ""))
@@ -186,7 +183,6 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
         percentDouble = 15.0
-//        serviceQualityLabel.setText("Ok")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
@@ -198,7 +194,6 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
         percentDouble = 18.0
-//        serviceQualityLabel.setText("Good")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
@@ -210,7 +205,6 @@ class InterfaceController: WKInterfaceController {
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         
         percentDouble = 20.0
-//        serviceQualityLabel.setText("Great")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
