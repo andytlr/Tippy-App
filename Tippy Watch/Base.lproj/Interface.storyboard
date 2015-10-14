@@ -112,12 +112,12 @@
                                         <action selector="tapOk" destination="AgC-eL-Hgc" id="QMY-P1-w1F"/>
                                     </connections>
                                 </button>
-                                <button width="0.33000000000000002" height="1" alignment="center" title="👍" id="NV5-Z1-0Bn">
+                                <button width="0.33000000000000002" height="1" alignment="center" title="👌" id="NV5-Z1-0Bn">
                                     <connections>
                                         <action selector="tapGood" destination="AgC-eL-Hgc" id="Upk-XK-V8t"/>
                                     </connections>
                                 </button>
-                                <button width="0.33000000000000002" height="1" alignment="right" title="👌" id="lAa-Pp-fZH">
+                                <button width="0.33000000000000002" height="1" alignment="right" title="👍" id="lAa-Pp-fZH">
                                     <connections>
                                         <action selector="tapGreat" destination="AgC-eL-Hgc" id="ybO-5J-pbv"/>
                                     </connections>

@@ -180,34 +180,37 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func tapOk() {
-        percentDouble = 15.0
-        serviceQualityLabel.setText("OK")
-        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        
+        percentDouble = 15.0
+        serviceQualityLabel.setText("Ok")
+        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
     }
     
     @IBAction func tapGood() {
-        percentDouble = 18.0
-        serviceQualityLabel.setText("Good")
-        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        
+        percentDouble = 18.0
+        serviceQualityLabel.setText("Good")
+        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
     }
     
     @IBAction func tapGreat() {
-        percentDouble = 20.0
-        serviceQualityLabel.setText("Great")
-        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
+        
+        percentDouble = 20.0
+        serviceQualityLabel.setText("Great")
+        percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
         
         updateTotal()
     }
