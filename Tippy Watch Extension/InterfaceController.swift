@@ -11,26 +11,6 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-    
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-        
-        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
-        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
-        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
-    }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
 
     @IBOutlet var valueLabel: WKInterfaceLabel!
     
@@ -48,6 +28,34 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var greatButton: WKInterfaceButton!
     
+    func initView() {
+        valueLabel.setText("Bill Amount")
+        tipValueLabel.setText("\(formatMoney(0.0))")
+        totalValueLabel.setText("\(formatMoney(0.0))")
+        
+        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
+        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+    }
+    
+    override func awakeWithContext(context: AnyObject?) {
+        super.awakeWithContext(context)
+        
+        // Configure interface objects here.
+        
+        initView()
+    }
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+    }
+    
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
+    
     // Function to format a double as money
     func formatMoney(cash: Double) -> String {
         let formatter = NSNumberFormatter()
@@ -62,8 +70,7 @@ class InterfaceController: WKInterfaceController {
         let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
         
         if bill == "$" {
-            tipValueLabel.setText("\(formatMoney(0.0))")
-            totalValueLabel.setText("\(formatMoney(0.0))")
+            initView()
         } else {
             let tip = (billDouble! / 100) * percentDouble
             let billTotal = billDouble! + tip
@@ -128,15 +135,23 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func zero() {
-        bill = bill + "0"
-        valueLabel.setText("\(bill)")
-        updateTotal()
+        if bill == "$" {
+            
+        } else {
+            bill = bill + "0"
+            valueLabel.setText("\(bill)")
+            updateTotal()
+        }
     }
     
     @IBAction func dot() {
-        bill = bill + "."
-        valueLabel.setText("\(bill)")
-        updateTotal()
+        if bill == "$" {
+            
+        } else {
+            bill = bill + "."
+            valueLabel.setText("\(bill)")
+            updateTotal()
+        }
     }
     
     @IBAction func clear() {
