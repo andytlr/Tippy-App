@@ -135,9 +135,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func zero() {
-        if bill == "$" {
-            
-        } else {
+        if bill != "$" {
             bill = bill + "0"
             valueLabel.setText("\(bill)")
             updateTotal()
@@ -145,9 +143,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func dot() {
-        if bill == "$" {
-            
-        } else {
+        if bill != "$" {
             bill = bill + "."
             valueLabel.setText("\(bill)")
             updateTotal()
