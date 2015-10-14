@@ -16,6 +16,10 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        
+        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
+        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
     }
     
     override func willActivate() {
@@ -44,67 +48,96 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var greatButton: WKInterfaceButton!
     
+    // Function to format a double as money
+    func formatMoney(cash: Double) -> String {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        return formatter.stringFromNumber(cash)!
+    }
+    
     var bill = "$"
     var percentDouble = 18.0
+
+    func updateTotal() {
+        let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
+        
+        let tip = (billDouble! / 100) * percentDouble
+        let billTotal = billDouble! + tip
+        
+        tipValueLabel.setText("\(formatMoney(tip))")
+        totalValueLabel.setText("\(formatMoney(billTotal))")
+    }
     
     @IBAction func seven() {
         bill = bill + "7"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func eight() {
         bill = bill + "8"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func nine() {
         bill = bill + "9"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func four() {
         bill = bill + "4"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func five() {
         bill = bill + "5"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func six() {
         bill = bill + "6"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func one() {
         bill = bill + "1"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
 
     @IBAction func two() {
         bill = bill + "2"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func three() {
         bill = bill + "3"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func zero() {
         bill = bill + "0"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func dot() {
         bill = bill + "."
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func clear() {
         bill = "$"
         valueLabel.setText("\(bill)")
+        updateTotal()
     }
     
     @IBAction func tapOk() {
@@ -114,6 +147,8 @@ class InterfaceController: WKInterfaceController {
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        
+        updateTotal()
     }
     
     @IBAction func tapGood() {
@@ -124,13 +159,7 @@ class InterfaceController: WKInterfaceController {
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         
-        //        let billDouble = Double(bill.stringByReplacingOccurrencesOfString(".0", withString: "").stringByReplacingOccurrencesOfString("$", withString: ""))
-        //
-        //        var tip = (billDouble! / 100) * percentDouble
-        //        var billTotal = billDouble! + tip
-        //
-        //        tipValueLabel.setText("\(tip)")
-        //        totalValueLabel.setText("\(billTotal)")
+        updateTotal()
     }
     
     @IBAction func tapGreat() {
@@ -140,6 +169,8 @@ class InterfaceController: WKInterfaceController {
         okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
         greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
+        
+        updateTotal()
     }
 
 }
