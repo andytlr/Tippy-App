@@ -18,9 +18,14 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var percentLabel: WKInterfaceLabel!
     
+    @IBOutlet var okButton: WKInterfaceButton!
+    
+    @IBOutlet var goodButton: WKInterfaceButton!
+    
+    @IBOutlet var greatButton: WKInterfaceButton!
+    
     var bill = "$"
     var percentDouble = 18.0
-//    var percentString = 
     
     @IBAction func seven() {
         bill = bill + "7"
@@ -86,18 +91,27 @@ class InterfaceController: WKInterfaceController {
         percentDouble = 15.0
         serviceQualityLabel.setText("OK")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
+        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
+        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
     }
     
     @IBAction func tapGood() {
         percentDouble = 18.0
         serviceQualityLabel.setText("Good")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
+        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
+        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
     }
     
     @IBAction func tapGreat() {
         percentDouble = 20.0
         serviceQualityLabel.setText("Great")
         percentLabel.setText("\(percentDouble)".stringByReplacingOccurrencesOfString(".0", withString: "") + "%")
+        okButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        goodButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.13))
+        greatButton.setBackgroundColor(UIColor.init(white: 1.0, alpha: 0.25))
     }
     
     override func awakeWithContext(context: AnyObject?) {
