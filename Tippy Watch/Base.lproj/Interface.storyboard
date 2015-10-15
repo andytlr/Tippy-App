@@ -110,16 +110,19 @@
                         <group height="0.40000000000000002" alignment="left" id="LXJ-Jq-GFe">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
                                     <connections>
                                         <action selector="tapOk" destination="AgC-eL-Hgc" id="QMY-P1-w1F"/>
                                     </connections>
                                 </button>
                                 <button width="0.33000000000000002" height="1" alignment="center" title="👌" id="NV5-Z1-0Bn">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
                                     <connections>
                                         <action selector="tapGood" destination="AgC-eL-Hgc" id="Upk-XK-V8t"/>
                                     </connections>
                                 </button>
                                 <button width="0.33000000000000002" height="1" alignment="right" title="👍" id="lAa-Pp-fZH">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
                                     <connections>
                                         <action selector="tapGreat" destination="AgC-eL-Hgc" id="ybO-5J-pbv"/>
                                     </connections>
