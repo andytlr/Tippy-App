@@ -107,7 +107,7 @@
                                 <label alignment="left" text="Rounded to" id="lKg-d1-HZ9"/>
                             </items>
                         </group>
-                        <group height="0.40000000000000002" alignment="left" id="LXJ-Jq-GFe">
+                        <group height="0.45000000000000001" alignment="left" id="LXJ-Jq-GFe">
                             <items>
                                 <button width="0.33000000000000002" height="1" alignment="left" title="✋" id="Mrm-KG-X6q">
                                     <fontDescription key="font" type="system" pointSize="20"/>
